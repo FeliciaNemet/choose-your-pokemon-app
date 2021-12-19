@@ -1,7 +1,20 @@
 @import "setup";
+@import "typography";
+
+
+
 
 body {
-     background-color: papayawhip;
-     color: blue;
+     background-color: lightgray;
+     color: orangered;
 }
 
+h1 {
+     text-transform: uppercase;
+     text-align: center;
+     font-family: $headerFont;
+}
+
+p {
+     text-align: center;
+}
