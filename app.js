@@ -1,4 +1,4 @@
-fetch('https://pokeapi.co/api/v2/evolution-chain/')
+const bulbasaur = fetch('https://pokeapi.co/api/v2/pokemon/')
      .then(function (response) {
           return response.json();
      })
@@ -6,12 +6,12 @@ fetch('https://pokeapi.co/api/v2/evolution-chain/')
           // console.log(jsonResult);
 
           const myPokemon = jsonResult;
-          console.log(myPokemon.results);
+          console.log(myPokemon.results[0].name);
      });
 
 
 
-
+// have the api call happen inside an event handler 
 
 // Pseudo code:
 
