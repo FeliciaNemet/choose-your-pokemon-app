@@ -240,6 +240,12 @@ body {
   color: orangered;
 }
 
+.wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 90%;
+}
+
 h1 {
   text-transform: uppercase;
   text-align: center;
@@ -247,5 +253,9 @@ h1 {
 }
 
 p {
+  text-align: center;
+}
+
+.myForm {
   text-align: center;
 }

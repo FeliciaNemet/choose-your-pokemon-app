@@ -17,9 +17,21 @@
      <p>Please select your starter pokemon below.</p>
      </header>
      <main>
-          <form>
+          <div class="wrapper">
+               <form action="" method="" class="myForm" name="myForm">
+                    <label for="pokemonChoice">Which pokemon?</label>
+                    <select id="pokemonChoice" name="pokemonChoice">
+                         <option value disabled selected>Please choose a starter</option>
+                         <option value="1">Bulbasaur</option>
+                         <option value="4">Charmander</option>
+                         <option value="7">Squirtle</option>
+                         <option value="25">Pikachu</option>
+                    </select>
+
+                    <button type="submit">Submit your chosen starter</button>
                
-          </form>
+               </form>
+          </div>
      </main>
 
 
