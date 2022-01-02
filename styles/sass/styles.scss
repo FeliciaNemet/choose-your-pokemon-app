@@ -1,5 +1,92 @@
 @import "setup";
+@import "typography";
+
+
+
 
 body {
-     background-color: papayawhip;
+     background-color: lightgray;
+     color: orangered;
+}
+
+.wrapper {
+     max-width: 1200px;
+     margin: 0 auto;
+     width: 90%;
+}
+h1 {
+     text-transform: uppercase;
+     text-align: center;
+     font-family: $headerFont;
+}
+
+p {
+     text-align: center;
+}
+
+.myForm {
+     text-align: center;
+}
+
+.masterBox {
+     display: flex;
+     flex-direction: row;
+     text-align: center;
+     justify-content: center;
+}
+
+.secondBox {
+     display: flex;
+     flex-direction: column;
+}
+
+// Found a really neat pokeball gradient credit to : https://codepen.io/blakeworsley/pen/pbdqBK 
+
+.container {
+     display: flex;
+     justify-content: center;
+     align-items: center;
+}
+
+.ball {
+     height: 100px;
+     width: 100px;  
+     border-radius: 100px;
+     display: flex;
+     border: 5px black solid;
+     justify-content: center;
+     align-items: center;
+     background-image: linear-gradient(#7D1827 5%, red 49%, black 5%, white 49%, #CADBD1)
+}
+
+
+
+.center, .center2 {
+     background: white;
+     border: 3px black solid;
+}
+.center {
+     width: 30px;
+     height: 30px;
+     border-radius: 30px;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     background: grey;
+}
+.center2 {
+     width: 25px;
+     height: 25px;
+     border-radius: 25px;
+     background-image: radial-gradient(white 60%, #757F7A)
+}
+
+.ball:hover{
+     transition-duration: .2s;
+     transform: rotate(5deg);
+/*   transform: rotate(0deg); */
+}
+
+.ball {
+  
 }

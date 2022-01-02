@@ -5,11 +5,65 @@
      <meta http-equiv="X-UA-Compatible" content="IE=edge">
      <meta name="viewport" content="width=device-width, initial-scale=1.0">
      <title>Choose Your Starter</title>
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+     <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
      <link rel="stylesheet" href="./styles/styles.css">
-     <script src="./app.js"></script>
+     
 </head>
 <body>
+     <header>
+          <div class="wrapper masterBox">
+               <div class="container">
+                    <div class="ball">
+                         <div class="center">
+                              <div class="center2">
+                              </div>
+                         </div>
+                    </div>
+               </div>
+               <div class="secondBox">
+               <h1>Choose Your Starter</h1>
+               <p>Please select your starter pokemon below.</p>
+               </div>
+               <div class="container">
+                    <div class="ball">
+                         <div class="center">
+                              <div class="center2">
+                              </div>
+                         </div>
+                    </div>
+               </div>
+          </div>
+     </header>
+     <main>
+          <div class="wrapper">
+               <form action="" method="" class="myForm" name="myForm">
+                    <label for="pokemonChoice">Which pokemon?</label>
+                    <select id="pokemonChoice" name="pokemonChoice">
+                         <option value disabled selected>Please choose a starter</option>
+                         <option value="1">Bulbasaur</option>
+                         <option value="4">Charmander</option>
+                         <option value="7">Squirtle</option>
+                         <option value="25">Pikachu</option>
+                    </select>
 
+                    <button type="submit">Submit your chosen starter</button>
+               
+               </form>
+          </div>
+     </main>
+     <footer>
+          <p>Created @ Juno College of Technology</p>
+          <p> Data courtesy of the
+               <a href="https://pokeapi.co/docs/v2">PokeApi.co</a>
+          </p>
+
+     </footer>
+
+
+
+     <script src="./app.js"></script>
 </body>
 </html>
 
