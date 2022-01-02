@@ -16,13 +16,11 @@ pokemonStarterApp.init = function () {
      pokemonStarterApp.getPokemon();
 };
 
-// store the api URL as a property on the app
-pokemonStarterApp.url = 'https://pokeapi.co/api/v2/pokemon/?limit=30';
 
+pokemonStarterApp.getPokemon = function(id) {
 
-pokemonStarterApp.getPokemon = function() {
-
-     const url = new URL(pokemonStarterApp.url);
+     // store the api URL as a property on the app
+     const url = `https://pokeapi.co/api/v2/pokemon/${id}?limit=30`;
 
      fetch(url)
           .then(function(response) {
@@ -30,9 +28,10 @@ pokemonStarterApp.getPokemon = function() {
           })
           .then(function(jsonResult) {
 
+               // console.log(jsonResult);
                const myPokemon = jsonResult;
 
-               console.log(myPokemon.results);
+               // console.log(myPokemon.results);
 
                const bulbasaurObj = myPokemon.results[0];
                const charmanderObj = myPokemon.results[3];
@@ -57,11 +56,7 @@ pokemonStarterApp.displayPokemon = function(jsonData) {
           const liElement = document.createElement('li');
           const imageElement = document.createElement('img');
 
-          imageElement.src = imageItem.urls.regular;
-          imageElement.alt = jsonData.alt_description;
-
-          ulElement.append(liElement);
-          liElement.appendChild(imageElement);
+          
      })
 };
 
