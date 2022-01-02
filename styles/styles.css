@@ -236,5 +236,16 @@ html {
 }
 
 body {
-  background-color: papayawhip;
+  background-color: lightgray;
+  color: orangered;
+}
+
+h1 {
+  text-transform: uppercase;
+  text-align: center;
+  font-family: "Press Start 2P", cursive;
+}
+
+p {
+  text-align: center;
 }

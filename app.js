@@ -1,9 +1,39 @@
+<<<<<<< HEAD
 const bulbasaur = fetch('https://pokeapi.co/api/v2/pokemon/')
+=======
+
+// url for Bulbasaur : (https://pokeapi.co/api/v2/pokemon/1/)
+
+
+// url for Charmander : (https://pokeapi.co/api/v2/pokemon/4/)
+
+
+// url for Squirtle : (https://pokeapi.co/api/v2/pokemon/7/)
+
+// url for Pikachu : (https://pokeapi.co/api/v2/pokemon/25/)
+
+
+
+// fetch('https://pokeapi.co/api/v2/pokemon/')
+     // .then(function (response) {
+          // return response.json();
+     // })
+     // .then(function (jsonResult) {
+          // console.log(jsonResult);
+
+          // const myPokemon = jsonResult;
+          // console.log(myPokemon.results[0].name);
+     // });
+
+
+
+fetch('https://pokeapi.co/api/v2/pokemon/')
+>>>>>>> 1fa7b6ea874dfc89fc6a02545e4fdf30fa347af6
      .then(function (response) {
           return response.json();
      })
      .then(function (jsonResult) {
-          // console.log(jsonResult);
+          console.log(jsonResult);
 
           const myPokemon = jsonResult;
           console.log(myPokemon.results[0].name);
