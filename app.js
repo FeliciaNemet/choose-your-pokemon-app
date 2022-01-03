@@ -1,9 +1,6 @@
-
 // url for Bulbasaur : (https://pokeapi.co/api/v2/pokemon/1/)
 
-
 // url for Charmander : (https://pokeapi.co/api/v2/pokemon/4/)
-
 
 // url for Squirtle : (https://pokeapi.co/api/v2/pokemon/7/)
 
@@ -11,29 +8,60 @@
 
 
 
-// fetch('https://pokeapi.co/api/v2/pokemon/')
-     // .then(function (response) {
-          // return response.json();
-     // })
-     // .then(function (jsonResult) {
-          // console.log(jsonResult);
+// create namespace for the app:
+const pokemonStarterApp = {};
 
-          // const myPokemon = jsonResult;
-          // console.log(myPokemon.results[0].name);
-     // });
+// create init function
+pokemonStarterApp.init = function () {
+     pokemonStarterApp.getPokemon();
+};
 
 
+pokemonStarterApp.getPokemon = function(id) {
 
-fetch('https://pokeapi.co/api/v2/pokemon/')
-     .then(function (response) {
-          return response.json();
+     // store the api URL as a property on the app
+     const url = `https://pokeapi.co/api/v2/pokemon/${id}?limit=30`;
+
+     fetch(url)
+          .then(function(response) {
+               return response.json();
+          })
+          .then(function(jsonResult) {
+
+               // console.log(jsonResult);
+               const myPokemon = jsonResult;
+
+               // console.log(myPokemon.results);
+
+               const bulbasaurObj = myPokemon.results[0];
+               const charmanderObj = myPokemon.results[3];
+               const squirtleObj = myPokemon.results[6];
+               const pikachuObj = myPokemon.results[24];
+
+               console.log(bulbasaurObj);
+               console.log(charmanderObj);
+               console.log(squirtleObj);
+               console.log(pikachuObj);
+
+               // pokemonStarterApp.displayPokemon(jsonResult);
+          });
+
+}
+
+// display the pokemon on the page
+pokemonStarterApp.displayPokemon = function(jsonData) {
+     const ulElement = document.querySelector('ul');
+     jsonData.forEach((imageItem) => {
+          // create new li elements for each pokemon
+          const liElement = document.createElement('li');
+          const imageElement = document.createElement('img');
+
+          
      })
-     .then(function (jsonResult) {
-          console.log(jsonResult);
+};
 
-          const myPokemon = jsonResult;
-          console.log(myPokemon.results);
-     });
+// initialize the app
+pokemonStarterApp.init();
 
 
 // Psuedo code
@@ -61,6 +89,7 @@ fetch('https://pokeapi.co/api/v2/pokemon/')
 
 
 
+// have the api call happen inside an event handler 
 
 // Pseudo code:
 
