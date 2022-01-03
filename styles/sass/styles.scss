@@ -1,14 +1,15 @@
 @import "setup";
 @import "typography";
-@import "squirtle-styles"
+@import "squirtle-styles";
 
 
 
 
 body {
      background-color: lightgray;
-     color: orangered;
+
 }
+
 
 .wrapper {
      max-width: 1200px;
@@ -19,10 +20,25 @@ h1 {
      text-transform: uppercase;
      text-align: center;
      font-family: $headerFont;
+     color: darkcyan;
 }
+
+h3 {
+     text-transform: uppercase;
+     color: darkcyan;
+     font-family: $buttonFont;
+}
+
 
 p {
      text-align: center;
+     font-family: $buttonFont;
+     
+}
+
+a {
+     text-decoration: none;
+     color: black;
 }
 
 .myForm {
@@ -88,6 +104,22 @@ p {
 /*   transform: rotate(0deg); */
 }
 
-.ball {
-  
+
+button {
+     text-transform: uppercase;
+     font-family: $buttonFont;
+     background-color: darkcyan;
+     border: none;
+}
+
+label {
+     text-transform: uppercase;
+     font-family: $buttonFont;
+}
+
+select {
+     text-transform: uppercase;
+     font-family: $buttonFont;
+     background-color: darkcyan;
+     border: none; 
 }
