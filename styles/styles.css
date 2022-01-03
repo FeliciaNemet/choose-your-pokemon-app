@@ -361,22 +361,3 @@ a {
           transform: rotate(5deg);
   /*   transform: rotate(0deg); */
 }
-
-button {
-  text-transform: uppercase;
-  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
-  background-color: darkcyan;
-  border: none;
-}
-
-label {
-  text-transform: uppercase;
-  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
-}
-
-select {
-  text-transform: uppercase;
-  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
-  background-color: darkcyan;
-  border: none;
-}
