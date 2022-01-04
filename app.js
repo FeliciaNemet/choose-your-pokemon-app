@@ -14,19 +14,19 @@ const pokemonStarterApp = {};
 // create init function
 pokemonStarterApp.init = () => {
      // pokemonStarterApp.getPokemon();
-     pokemonStarterApp.setUpEventListeners = function () {
-          document.querySelector('#pokemonChoice').addEventListener('change', function () {
-               console.log("Starter pokemon chosen");
-          })
-     }
+     pokemonStarterApp.setUpEventListeners();
 
 };
 
 
-pokemonStarterApp.getPokemon = (id) => {
+pokemonStarterApp.getPokemon = (query) => {
 
      // store the api URL as a property on the app
      const url = `https://pokeapi.co/api/v2/pokemon/${id}?limit=30`;
+     url.search = new URLSearchParams({
+          q: 'query'
+     });
+
 
      fetch(url)
           .then( (response) => {
@@ -69,6 +69,13 @@ pokemonStarterApp.displayPokemon = (jsonData) => {
           
      })
 };
+
+
+pokemonStarterApp.setUpEventListeners = function () {
+     document.querySelector('#pokemonChoice').addEventListener('change', function () {
+          console.log("Starter pokemon chosen");
+     })
+}
 
 // initialize the app
 pokemonStarterApp.init();
