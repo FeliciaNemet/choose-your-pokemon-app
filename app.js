@@ -12,12 +12,12 @@
 const pokemonStarterApp = {};
 
 // create init function
-pokemonStarterApp.init = function () {
+pokemonStarterApp.init = () => {
      pokemonStarterApp.getPokemon();
 };
 
 
-pokemonStarterApp.getPokemon = function(id) {
+pokemonStarterApp.getPokemon = (id) => {
 
      // store the api URL as a property on the app
      const url = `https://pokeapi.co/api/v2/pokemon/${id}?limit=30`;
@@ -49,7 +49,7 @@ pokemonStarterApp.getPokemon = function(id) {
 }
 
 // display the pokemon on the page
-pokemonStarterApp.displayPokemon = function(jsonData) {
+pokemonStarterApp.displayPokemon = (jsonData) => {
      const ulElement = document.querySelector('ul');
      jsonData.forEach((imageItem) => {
           // create new li elements for each pokemon
