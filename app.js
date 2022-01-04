@@ -13,7 +13,13 @@ const pokemonStarterApp = {};
 
 // create init function
 pokemonStarterApp.init = () => {
-     pokemonStarterApp.getPokemon();
+     // pokemonStarterApp.getPokemon();
+     pokemonStarterApp.setUpEventListeners = function () {
+          document.querySelector('#pokemonChoice').addEventListener('change', function () {
+               console.log("Starter pokemon chosen");
+          })
+     }
+
 };
 
 
@@ -43,7 +49,7 @@ pokemonStarterApp.getPokemon = (id) => {
                console.log(squirtleObj);
                console.log(pikachuObj);
 
-               // pokemonStarterApp.displayPokemon(jsonResult);
+               pokemonStarterApp.displayPokemon(jsonResult.sprites);
           });
 
 }
@@ -51,10 +57,14 @@ pokemonStarterApp.getPokemon = (id) => {
 // display the pokemon on the page
 pokemonStarterApp.displayPokemon = (jsonData) => {
      const ulElement = document.querySelector('ul');
+
      jsonData.forEach((imageItem) => {
           // create new li elements for each pokemon
           const liElement = document.createElement('li');
+          
           const imageElement = document.createElement('img');
+          imageElement.src = imageItem.sprites.url
+          imageElement.alt = imageItem.name;
 
           
      })
