@@ -23,10 +23,10 @@ pokemonStarterApp.getPokemon = function(id) {
      const url = `https://pokeapi.co/api/v2/pokemon/${id}?limit=30`;
 
      fetch(url)
-          .then(function(response) {
+          .then( (response) => {
                return response.json();
           })
-          .then(function(jsonResult) {
+          .then( (jsonResult) => {
 
                // console.log(jsonResult);
                const myPokemon = jsonResult;
