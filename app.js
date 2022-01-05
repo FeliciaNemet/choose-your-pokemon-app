@@ -21,11 +21,10 @@ pokemonStarterApp.init = () => {
 
 pokemonStarterApp.setUpEventListeners = () => {
      document.querySelector('#pokemonChoice').addEventListener('change', () => {
-          console.log(`the pokemon is chosen`);
-          const animal = (this.value);
+     pokemonStarterApp.getPokemon = (this.value);
           console.log(pokemonChoice);
           // pokemonStarterApp.getPokemon(pokemonChoice);
-     })
+     });
 }
 
 
