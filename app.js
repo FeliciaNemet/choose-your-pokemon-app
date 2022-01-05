@@ -20,15 +20,16 @@ pokemonStarterApp.init = () => {
 
 
 pokemonStarterApp.setUpEventListeners = () => {
-     document.querySelector('#pokemonChoice').addEventListener('change', () => {
-     pokemonStarterApp.getPokemon = (this.value);
-          console.log(pokemonChoice);
+     document.querySelector('#pokemonChoice').addEventListener('change', function() {
+          pokemonStarterApp.findPokemon = this.value;
+          console.log(pokemonStarterApp.findPokemon);
+          pokemonStarterApp.getPokemon(pokemonStarterApp.findPokemon);
           // pokemonStarterApp.getPokemon(pokemonChoice);
      });
 }
 
 
-pokemonStarterApp.getPokemon = (query) => {
+pokemonStarterApp.getPokemon = (id) => {
 
      // store the api URL as a property on the app
      const url = `https://pokeapi.co/api/v2/pokemon/${id}?limit=30`;
@@ -43,40 +44,40 @@ pokemonStarterApp.getPokemon = (query) => {
           })
           .then( (jsonResult) => {
 
-               // console.log(jsonResult);
-               const myPokemon = jsonResult;
+          console.log(jsonResult);
+               // const myPokemon = jsonResult;
 
-               // console.log(myPokemon.results);
+               // // console.log(myPokemon.results);
 
-               const bulbasaurObj = myPokemon.results[0];
-               const charmanderObj = myPokemon.results[3];
-               const squirtleObj = myPokemon.results[6];
-               const pikachuObj = myPokemon.results[24];
+               // const bulbasaurObj = myPokemon.results[0];
+               // const charmanderObj = myPokemon.results[3];
+               // const squirtleObj = myPokemon.results[6];
+               // const pikachuObj = myPokemon.results[24];
 
-               console.log(bulbasaurObj);
-               console.log(charmanderObj);
-               console.log(squirtleObj);
-               console.log(pikachuObj);
+               // console.log(bulbasaurObj);
+               // console.log(charmanderObj);
+               // console.log(squirtleObj);
+               // console.log(pikachuObj);
 
-               pokemonStarterApp.displayPokemon(jsonResult.sprites);
+               pokemonStarterApp.displayPokemon(jsonResult);
           });
 
 }
 
 // display the pokemon on the page
 pokemonStarterApp.displayPokemon = (jsonData) => {
-     const ulElement = document.querySelector('ul');
+     const Imageitem = document.createElement(`li`);
 
-     jsonData.forEach((imageItem) => {
-          // create new li elements for each pokemon
-          const liElement = document.createElement('li');
+     // jsonData.forEach((imageItem) => {
+     //      // create new li elements for each pokemon
+     //      const liElement = document.createElement('li');
           
-          const imageElement = document.createElement('img');
-          imageElement.src = imageItem.sprites.url;
-          imageElement.alt = imageItem.name;
+     //      const imageElement = document.createElement('img');
+     //      imageElement.src = imageItem.sprites[`front_default`].url;
+     //      imageElement.alt = imageItem.name;
 
           
-     })
+     // })
 };
 
 
