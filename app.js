@@ -19,6 +19,16 @@ pokemonStarterApp.init = () => {
 };
 
 
+pokemonStarterApp.setUpEventListeners = () => {
+     document.querySelector('#pokemonChoice').addEventListener('change', () => {
+          console.log(`the pokemon is chosen`);
+          const animal = (this.value);
+          console.log(pokemonChoice);
+          // pokemonStarterApp.getPokemon(pokemonChoice);
+     })
+}
+
+
 pokemonStarterApp.getPokemon = (query) => {
 
      // store the api URL as a property on the app
@@ -63,7 +73,7 @@ pokemonStarterApp.displayPokemon = (jsonData) => {
           const liElement = document.createElement('li');
           
           const imageElement = document.createElement('img');
-          imageElement.src = imageItem.sprites.url
+          imageElement.src = imageItem.sprites.url;
           imageElement.alt = imageItem.name;
 
           
@@ -71,39 +81,18 @@ pokemonStarterApp.displayPokemon = (jsonData) => {
 };
 
 
-pokemonStarterApp.setUpEventListeners = function () {
-     document.querySelector('#pokemonChoice').addEventListener('change', function () {
-          console.log("Starter pokemon chosen");
-     })
-}
 
 // initialize the app
 pokemonStarterApp.init();
 
 
-// Psuedo code
-// const fetchPokemon = () => {
 
+     
 
-     // const promises = [];
-     // for (let i = 1; i <= 150; i++) {
-
-          // const url = `https://pokeapi.co/api/v2/pokemon/${i}`
-          // promises.push(fetch(url).then((res) => res.json()));
-     // }
-
-     // Promise.all(promises).then(results => {
-          // const pokemon = results.map((data) => ({
+     
                // name: data.name,
                // id: data.id,
-               // image: data.sprites['front_default'],
-               // type: data.types.map((type) => type.type.name).join(', ')
-          // }));
-          // displayPokemon(pokemon);
-
-     // });
-// };
-
+               // image: data.sprites['front_default']
 
 
 // have the api call happen inside an event handler 
