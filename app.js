@@ -48,33 +48,39 @@ pokemonStarterApp.getPokemon = (id) => {
                const myPokemon = jsonResult;
 
                // // console.log(myPokemon.results);
-
-               pokemonStarterApp.displayPokemon(jsonResult);
+               pokemonStarterApp.displayPokemon(jsonResult.pokeObject);
+               
           });
 
 }
 
 // display the pokemon on the page
-pokemonStarterApp.displayPokemon = (jsonResult) => {
-     const pokeBox = document.createElement(`li`);
-     pokeBox.classList.add(`className`);
+pokemonStarterApp.displayPokemon = (pokeDetails) => {
+     const pokeBox = document.querySelector(`#pokeBox`);
+     pokeBox.innerHTML = ``;
 
-     const pokeName = document.createElement(`h3`);
-     pokeName.innerText = jsonResult.pokeName;
+          pokeDetails.forEach( (pokeObject) => {
+               const pokeCube = document.createElement(`div`);
+               pokeCube.classList.add(`pokeContainer`)
 
-     const pokeType = document.createElement(`p`);
-     pokeType.innerText = jsonResult.types;
+               const pokeName = document.createElement(`h3`);
+               pokeName.innerText = jsonResult.pokeName;
 
-     const pokeImage = document.createElement(`img`);
-     pokeImage.src = sprites.front_default.url;
-     console.log(jsonData.sprites[`front_default`]);
-     image.alt = artObject.longTitle;
+               const pokeType = document.createElement(`p`);
+               pokeType.innerText = jsonResult.types;
 
-     artPiece.appendChild(title);
-     artPiece.appendChild(artist);
-     imageItem.appendChild(image);
+               const pokeImage = document.createElement(`img`);
+               pokeImage.src = pokeObject[`sprites`][`front_default`];
+               console.log(pokeObject[`sprites`][`front_default`]);
+               pokeImage.alt = pokeObject.name;
 
-     galleryElement.appendChild(artPiece);
+               pokeCube.appendChild(pokeName);
+               pokeCube.appendChild(pokeType);
+               pokeImage.appendChild(pokeImage);
+
+               pokeBox.appendChild(pokeCube);
+
+          });
 };
 
      // jsonData.forEach((imageItem) => {
