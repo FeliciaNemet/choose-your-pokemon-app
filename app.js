@@ -24,7 +24,7 @@ pokemonStarterApp.setUpEventListeners = () => {
           pokemonStarterApp.findPokemon = this.value;
           console.log(pokemonStarterApp.findPokemon);
           pokemonStarterApp.getPokemon(pokemonStarterApp.findPokemon);
-          // pokemonStarterApp.getPokemon(pokemonChoice);
+
      });
 }
 
@@ -45,19 +45,9 @@ pokemonStarterApp.getPokemon = (id) => {
           .then( (jsonResult) => {
 
           console.log(jsonResult);
-               // const myPokemon = jsonResult;
+               const myPokemon = jsonResult;
 
                // // console.log(myPokemon.results);
-
-               // const bulbasaurObj = myPokemon.results[0];
-               // const charmanderObj = myPokemon.results[3];
-               // const squirtleObj = myPokemon.results[6];
-               // const pikachuObj = myPokemon.results[24];
-
-               // console.log(bulbasaurObj);
-               // console.log(charmanderObj);
-               // console.log(squirtleObj);
-               // console.log(pikachuObj);
 
                pokemonStarterApp.displayPokemon(jsonResult);
           });
@@ -65,8 +55,27 @@ pokemonStarterApp.getPokemon = (id) => {
 }
 
 // display the pokemon on the page
-pokemonStarterApp.displayPokemon = (jsonData) => {
-     const Imageitem = document.createElement(`li`);
+pokemonStarterApp.displayPokemon = (jsonResult) => {
+     const pokeBox = document.createElement(`li`);
+     pokeBox.classList.add(`className`);
+
+     const pokeName = document.createElement(`h3`);
+     pokeName.innerText = jsonResult.pokeName;
+
+     const pokeType = document.createElement(`p`);
+     pokeType.innerText = jsonResult.types;
+
+     const pokeImage = document.createElement(`img`);
+     pokeImage.src = sprites.front_default.url;
+     console.log(jsonData.sprites[`front_default`]);
+     image.alt = artObject.longTitle;
+
+     artPiece.appendChild(title);
+     artPiece.appendChild(artist);
+     imageItem.appendChild(image);
+
+     galleryElement.appendChild(artPiece);
+};
 
      // jsonData.forEach((imageItem) => {
      //      // create new li elements for each pokemon
@@ -78,7 +87,7 @@ pokemonStarterApp.displayPokemon = (jsonData) => {
 
           
      // })
-};
+
 
 
 
