@@ -30,9 +30,6 @@ pokemonStarterApp.setUpEventListeners = () => {
      });
 };
 
-
-pokemonStarterApp.getPokemon = (id) => {
-
 pokemonStarterApp.getPokemon = (id) => {
      // store the api URL as a property on the app
      const url = `https://pokeapi.co/api/v2/pokemon/${id}?limit=30`;
@@ -116,7 +113,5 @@ pokemonStarterApp.init();
                // id: data.id,
                // image: data.sprites['front_default']
 
-};
 
-// initialize the app
-pokemonStarterApp.init()};
+};
