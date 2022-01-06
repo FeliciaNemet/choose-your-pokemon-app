@@ -23,7 +23,6 @@ pokemonStarterApp.setUpEventListeners = () => {
      });
 }
 
-
 pokemonStarterApp.getPokemon = (id) => {
      // store the api URL as a property on the app
      const url = `https://pokeapi.co/api/v2/pokemon/${id}?limit=30`;
@@ -44,27 +43,32 @@ pokemonStarterApp.getPokemon = (id) => {
                // eg: artApp.displayPieces(data.artObjects);
 
                pokemonStarterApp.displayPokers(myPokemon);
-               
+
+
           });
 }
 
-// display the pokemon on the page
-pokemonStarterApp.displayPokemon = (pokeObject) => {
 
-               const pokeName = document.querySelector(`#poke-name`);
-               pokeName.innerHTML = pokemonStarterApp.findPokemon;
+pokemonStarterApp.displayPokers = (pokeObject) => {
 
-               const pokeNumber = document.querySelector(`#poke-type`);
-               pokeNumber.innerHTML = pokeObject.id;
+     const pokeName = document.querySelector(`#poke-name`);
+     pokeName.innerHTML = pokemonStarterApp.findPokemon;
 
-               const pokeFrontImage = document.querySelector(`#poke-front-image`);
-               pokeFrontImage.src = pokeObject[`sprites`][`front_default`];
+     const pokeNumber = document.querySelector(`#poke-number`);
+     pokeNumber.innerHTML = pokeObject.id;
 
-               const pokeBackImage = document.querySelector(`#poke-back-image`);
-               pokeBackImage.src = pokeObject[`sprites`][`back_default`];
+     const pokeType = document.querySelector(`#poke-type`); 
+     pokeType.innerHTML = pokeObject.types.type.map();
+     
 
-};
+     const pokeFrontImage = document.querySelector(`#poke-front-image`);
+     pokeFrontImage.src = pokeObject[`sprites`][`front_default`];
+
+     const pokeBackImage = document.querySelector(`#poke-back-image`);
+     pokeBackImage.src = pokeObject[`sprites`][`back_default`];
+
+
+}
 
 // initialize the app
 pokemonStarterApp.init();
-
