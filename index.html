@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
      <meta charset="UTF-8">
      <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,8 +10,9 @@
      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
      <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
      <link rel="stylesheet" href="./styles/styles.css">
-     
+
 </head>
+
 <body>
      <header>
           <div class="wrapper masterBox">
@@ -23,8 +25,8 @@
                     </div>
                </div>
                <div class="secondBox">
-               <h1>Choose Your Starter</h1>
-               <p>Please select your starter pokemon below.</p>
+                    <h1>Choose Your Starter</h1>
+                    <h3>Please select your starter pokemon below.</h3>
                </div>
                <div class="container">
                     <div class="ball">
@@ -38,40 +40,39 @@
      </header>
      <main>
           <div class="wrapper">
-               <form action="" method="" class="myForm" name="myForm">
-                    <label for="pokemonChoice">Which pokemon?</label>
-                    <select id="pokemonChoice" name="pokemonChoice">
-                         <option value disabled selected>Please choose a starter</option>
-                         <option value="1">Bulbasaur</option>
-                         <option value="4">Charmander</option>
-                         <option value="7">Squirtle</option>
-                         <option value="25">Pikachu</option>
-                    </select>
 
-                    <button type="submit">Submit your chosen starter</button>
-               
+               <form action="" class="myForm" name="myForm">
+                    <label for="pokemonChoice">Which pokemon?</label>
+                    <select name="pokemonChoice" id="pokemonChoice">
+                         <option value disabled selected>Please choose a starter</option>
+                         <option value="bulbasaur">Bulbasaur</option>
+                         <option value="charmander">Charmander</option>
+                         <option value="squirtle">Squirtle</option>
+                         <option value="pikachu">Pikachu</option>
+                    </select>
                </form>
 
                <div class="wrapper">
-                    <ul class="pokemon-data">
+                    <div class="pokemon-data" id="poke-buddies">
                          <!-- API data goes here -->
-                    </ul>
+                         <img src="" alt="" class="poke-front-image" id="poke-front-image">
+                         <img src="" alt="" class="poke-back-image" id="poke-back-image">
+                         <h2 class="poke-name" id="poke-name"></h2>
+                         <h3 class="poke-type" id="poke-type"></h3>
+                    </div>
                </div>
 
-          </div>
+          </div> <!-- wrapper ends -->
+
      </main>
+
      <footer>
           <p>Created @ <a href="https://junocollege.com/" target="blank">Juno College of Technology</a></p>
-          <p> Data courtesy of the
-               <a href="https://pokeapi.co/docs/v2">PokeApi.co</a>
-          </p>
-
+          <p> Data courtesy of the <a href="https://pokeapi.co/docs/v2" target="blank">PokeApi.co</a></p>
+          <p>Developed by Karen Evans & Felicia Nemet</p>
      </footer>
-
-
 
      <script src="./app.js"></script>
 </body>
+
 </html>
-
-
