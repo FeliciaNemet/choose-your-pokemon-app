@@ -8,44 +8,34 @@ const pokemonStarterApp = {};
 
 // create init function
 pokemonStarterApp.init = () => {
-<<<<<<< HEAD
      // pokemonStarterApp.getPokemon();
      pokemonStarterApp.setUpEventListeners();
 
-=======
-     pokemonStarterApp.setUpEventListeners();
-     pokemonStarterApp.getPokemon();
->>>>>>> 6be332a36d626a971177c36460340985b1c6221d
 };
 
 pokemonStarterApp.setUpEventListeners = () => {
      document.querySelector('#pokemonChoice').addEventListener('change', function () {
+
+     
           pokemonStarterApp.findPokemon = this.value;
 
           console.log(pokemonStarterApp.findPokemon);  // this is displaying the value (name of pokemon)
-
-<<<<<<< HEAD
+     });
 pokemonStarterApp.setUpEventListeners = () => {
      document.querySelector('#pokemonChoice').addEventListener('change', function() {
           pokemonStarterApp.findPokemon = this.value;
           console.log(pokemonStarterApp.findPokemon);
-=======
->>>>>>> 6be332a36d626a971177c36460340985b1c6221d
           pokemonStarterApp.getPokemon(pokemonStarterApp.findPokemon);
 
      });
-}
-<<<<<<< HEAD
+};
 
 
 pokemonStarterApp.getPokemon = (id) => {
-=======
->>>>>>> 6be332a36d626a971177c36460340985b1c6221d
 
 pokemonStarterApp.getPokemon = (id) => {
      // store the api URL as a property on the app
      const url = `https://pokeapi.co/api/v2/pokemon/${id}?limit=30`;
-<<<<<<< HEAD
      url.search = new URLSearchParams({
           q: 'query'
      });
@@ -58,36 +48,15 @@ pokemonStarterApp.getPokemon = (id) => {
           .then( (jsonResult) => {
 
           console.log(jsonResult);
-=======
-     // url.search = new URLSearchParams({
-     //      q: 'query'
-     // });
-
-     fetch(url)
-          .then((response) => {
-               return response.json();
-          })
-          .then((jsonResult) => {
->>>>>>> 6be332a36d626a971177c36460340985b1c6221d
                const myPokemon = jsonResult;
                console.log(myPokemon);
 
-<<<<<<< HEAD
                // // console.log(myPokemon.results);
                pokemonStarterApp.displayPokemon(jsonResult.pokeObject);
                
-=======
-               // need to call the display function in here
-               // eg: artApp.displayPieces(data.artObjects);
-
-               pokemonStarterApp.displayPokers(myPokemon);
-
-
->>>>>>> 6be332a36d626a971177c36460340985b1c6221d
           });
 }
 
-<<<<<<< HEAD
 // display the pokemon on the page
 pokemonStarterApp.displayPokemon = (pokeDetails) => {
      const pokeBox = document.querySelector(`#pokeBox`);
@@ -133,13 +102,6 @@ pokemonStarterApp.displayPokemon = (pokeDetails) => {
 
 // initialize the app
 pokemonStarterApp.init();
-=======
-
-pokemonStarterApp.displayPokers = (pokeObject) => {
-
-     const pokeName = document.querySelector(`#poke-name`);
-     pokeName.innerHTML = pokemonStarterApp.findPokemon;
->>>>>>> 6be332a36d626a971177c36460340985b1c6221d
 
      const pokeNumber = document.querySelector(`#poke-type`);
      pokeNumber.innerHTML = pokeObject.id;
@@ -147,7 +109,6 @@ pokemonStarterApp.displayPokers = (pokeObject) => {
      const pokeFrontImage = document.querySelector(`#poke-front-image`);
      pokeFrontImage.src = pokeObject[`sprites`][`front_default`];
 
-<<<<<<< HEAD
      
 
      
@@ -155,13 +116,7 @@ pokemonStarterApp.displayPokers = (pokeObject) => {
                // id: data.id,
                // image: data.sprites['front_default']
 
-=======
-     const pokeBackImage = document.querySelector(`#poke-back-image`);
-     pokeBackImage.src = pokeObject[`sprites`][`back_default`];
->>>>>>> 6be332a36d626a971177c36460340985b1c6221d
-
-
-}
+};
 
 // initialize the app
-pokemonStarterApp.init();
+pokemonStarterApp.init()};
