@@ -237,7 +237,6 @@ html {
 
 body {
   background-color: lightgray;
-  color: orangered;
 }
 
 .wrapper {
@@ -250,10 +249,23 @@ h1 {
   text-transform: uppercase;
   text-align: center;
   font-family: "Press Start 2P", cursive;
+  color: darkcyan;
+}
+
+h2 {
+  text-transform: uppercase;
+  color: darkcyan;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
 }
 
 p {
   text-align: center;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: black;
 }
 
 .myForm {
@@ -282,6 +294,9 @@ p {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .container {
@@ -348,4 +363,16 @@ p {
   -webkit-transform: rotate(5deg);
           transform: rotate(5deg);
   /*   transform: rotate(0deg); */
+}
+
+label {
+  text-transform: uppercase;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+}
+
+select {
+  text-transform: uppercase;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  background-color: darkcyan;
+  border: none;
 }
