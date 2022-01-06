@@ -1,13 +1,11 @@
 @import "setup";
 @import "typography";
-@import "squirtle-styles"
-
+@import "squirtle-styles";
 
 
 
 body {
      background-color: lightgray;
-     color: orangered;
 }
 
 .wrapper {
@@ -15,14 +13,28 @@ body {
      margin: 0 auto;
      width: 90%;
 }
+
 h1 {
      text-transform: uppercase;
      text-align: center;
      font-family: $headerFont;
+     color: darkcyan;
+}
+
+h2 {
+     text-transform: uppercase;
+     color: darkcyan;
+     font-family: $buttonFont;
 }
 
 p {
      text-align: center;
+     font-family: $buttonFont;
+}
+
+a {
+     text-decoration: none;
+     color: black;
 }
 
 .myForm {
@@ -39,6 +51,7 @@ p {
 .secondBox {
      display: flex;
      flex-direction: column;
+     align-items: center;
 }
 
 // Found a really neat pokeball gradient credit to : https://codepen.io/blakeworsley/pen/pbdqBK 
@@ -88,6 +101,14 @@ p {
 /*   transform: rotate(0deg); */
 }
 
-.ball {
-  
+label {
+     text-transform: uppercase;
+     font-family: $buttonFont;
+}
+
+select {
+     text-transform: uppercase;
+     font-family: $buttonFont;
+     background-color: darkcyan;
+     border: none; 
 }
