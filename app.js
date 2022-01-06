@@ -1,59 +1,69 @@
-<<<<<<< HEAD
-const bulbasaur = fetch('https://pokeapi.co/api/v2/pokemon/')
-=======
-
 // url for Bulbasaur : (https://pokeapi.co/api/v2/pokemon/1/)
-
-
 // url for Charmander : (https://pokeapi.co/api/v2/pokemon/4/)
-
-
 // url for Squirtle : (https://pokeapi.co/api/v2/pokemon/7/)
-
 // url for Pikachu : (https://pokeapi.co/api/v2/pokemon/25/)
 
+// create namespace for the app:
+const pokemonStarterApp = {};
 
+// create init function
+pokemonStarterApp.init = () => {
+     pokemonStarterApp.setUpEventListeners();
+     pokemonStarterApp.getPokemon();
+};
 
-// fetch('https://pokeapi.co/api/v2/pokemon/')
-     // .then(function (response) {
-          // return response.json();
-     // })
-     // .then(function (jsonResult) {
-          // console.log(jsonResult);
+pokemonStarterApp.setUpEventListeners = () => {
+     document.querySelector('#pokemonChoice').addEventListener('change', function () {
+          pokemonStarterApp.findPokemon = this.value;
 
-          // const myPokemon = jsonResult;
-          // console.log(myPokemon.results[0].name);
+          console.log(pokemonStarterApp.findPokemon);  // this is displaying the value (name of pokemon)
+
+          pokemonStarterApp.getPokemon(pokemonStarterApp.findPokemon);
+
+     });
+}
+
+pokemonStarterApp.getPokemon = (id) => {
+     // store the api URL as a property on the app
+     const url = `https://pokeapi.co/api/v2/pokemon/${id}?limit=30`;
+     // url.search = new URLSearchParams({
+     //      q: 'query'
      // });
 
+     fetch(url)
+          .then((response) => {
+               return response.json();
+          })
+          .then((jsonResult) => {
+               const myPokemon = jsonResult;
+               console.log(myPokemon);
+
+               // need to call the display function in here
+               // eg: artApp.displayPieces(data.artObjects);
+
+               pokemonStarterApp.displayPokers(myPokemon);
 
 
-fetch('https://pokeapi.co/api/v2/pokemon/')
->>>>>>> 1fa7b6ea874dfc89fc6a02545e4fdf30fa347af6
-     .then(function (response) {
-          return response.json();
-     })
-     .then(function (jsonResult) {
-          console.log(jsonResult);
-
-          const myPokemon = jsonResult;
-          console.log(myPokemon.results[0].name);
-     });
+          });
+}
 
 
+pokemonStarterApp.displayPokers = (pokeObject) => {
 
-// have the api call happen inside an event handler 
+     const pokeName = document.querySelector(`#poke-name`);
+     pokeName.innerHTML = pokemonStarterApp.findPokemon;
 
-// Pseudo code:
+     const pokeNumber = document.querySelector(`#poke-type`);
+     pokeNumber.innerHTML = pokeObject.id;
 
-// create a namespace object for our app
-// create an init method
-//   - call the init method on page load
+     const pokeFrontImage = document.querySelector(`#poke-front-image`);
+     pokeFrontImage.src = pokeObject[`sprites`][`front_default`];
 
-// create a selection input for the user to select from 4 different Pokemon
-//   -(representing 4 types: fire, water, grass, electricity)
-//        - store the users selection in a variable
-//        - use the variable to make an api call
-//             - display the selected Pokemon on the page with some stats and an image
-//             - based on the users input we will alter the css on page to reflect the type 
-//               of Pokemon they selected (fire, water, grass, electricity)
-//        - clear the contents after each call
+     const pokeBackImage = document.querySelector(`#poke-back-image`);
+     pokeBackImage.src = pokeObject[`sprites`][`back_default`];
+
+
+}
+
+// initialize the app
+pokemonStarterApp.init();
