@@ -55,6 +55,7 @@ a {
 .secondBox {
      display: flex;
      flex-direction: column;
+     align-items: center;
 }
 
 // Found a really neat pokeball gradient credit to : https://codepen.io/blakeworsley/pen/pbdqBK 
@@ -104,13 +105,12 @@ a {
 /*   transform: rotate(0deg); */
 }
 
-
-button {
-     text-transform: uppercase;
-     font-family: $buttonFont;
-     background-color: darkcyan;
-     border: none;
-}
+// button {
+//      text-transform: uppercase;
+//      font-family: $buttonFont;
+//      background-color: darkcyan;
+//      border: none;
+// }
 
 label {
      text-transform: uppercase;
@@ -123,3 +123,13 @@ select {
      background-color: darkcyan;
      border: none; 
 }
+
+
+
+// STYLING FOR POKEMON CONTAINER // 
+
+.pokeContainer {
+     
+}
+
+

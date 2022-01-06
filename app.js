@@ -12,58 +12,102 @@
 const pokemonStarterApp = {};
 
 // create init function
-pokemonStarterApp.init = function () {
-     pokemonStarterApp.getPokemon();
+pokemonStarterApp.init = () => {
+     // pokemonStarterApp.getPokemon();
+     pokemonStarterApp.setUpEventListeners();
+
 };
 
 
-pokemonStarterApp.getPokemon = function(id) {
+pokemonStarterApp.setUpEventListeners = () => {
+     document.querySelector('#pokemonChoice').addEventListener('change', function() {
+          pokemonStarterApp.findPokemon = this.value;
+          console.log(pokemonStarterApp.findPokemon);
+          pokemonStarterApp.getPokemon(pokemonStarterApp.findPokemon);
+
+     });
+}
+
+
+pokemonStarterApp.getPokemon = (id) => {
 
      // store the api URL as a property on the app
      const url = `https://pokeapi.co/api/v2/pokemon/${id}?limit=30`;
+     url.search = new URLSearchParams({
+          q: 'query'
+     });
+
 
      fetch(url)
-          .then(function(response) {
+          .then( (response) => {
                return response.json();
           })
-          .then(function(jsonResult) {
+          .then( (jsonResult) => {
 
-               // console.log(jsonResult);
+          console.log(jsonResult);
                const myPokemon = jsonResult;
 
-               // console.log(myPokemon.results);
-
-               const bulbasaurObj = myPokemon.results[0];
-               const charmanderObj = myPokemon.results[3];
-               const squirtleObj = myPokemon.results[6];
-               const pikachuObj = myPokemon.results[24];
-
-               console.log(bulbasaurObj);
-               console.log(charmanderObj);
-               console.log(squirtleObj);
-               console.log(pikachuObj);
-
-               // pokemonStarterApp.displayPokemon(jsonResult);
+               // // console.log(myPokemon.results);
+               pokemonStarterApp.displayPokemon(jsonResult.pokeObject);
+               
           });
 
 }
 
 // display the pokemon on the page
-pokemonStarterApp.displayPokemon = function(jsonData) {
-     const ulElement = document.querySelector('ul');
-     jsonData.forEach((imageItem) => {
-          // create new li elements for each pokemon
-          const liElement = document.createElement('li');
-          const imageElement = document.createElement('img');
+pokemonStarterApp.displayPokemon = (pokeDetails) => {
+     const pokeBox = document.querySelector(`#pokeBox`);
+     pokeBox.innerHTML = ``;
+
+          pokeDetails.forEach( (pokeObject) => {
+               const pokeCube = document.createElement(`div`);
+               pokeCube.classList.add(`pokeContainer`)
+
+               const pokeName = document.createElement(`h3`);
+               pokeName.innerText = jsonResult.pokeName;
+
+               const pokeType = document.createElement(`p`);
+               pokeType.innerText = jsonResult.types;
+
+               const pokeImage = document.createElement(`img`);
+               pokeImage.src = pokeObject[`sprites`][`front_default`];
+               console.log(pokeObject[`sprites`][`front_default`]);
+               pokeImage.alt = pokeObject.name;
+
+               pokeCube.appendChild(pokeName);
+               pokeCube.appendChild(pokeType);
+               pokeImage.appendChild(pokeImage);
+
+               pokeBox.appendChild(pokeCube);
+
+          });
+};
+
+     // jsonData.forEach((imageItem) => {
+     //      // create new li elements for each pokemon
+     //      const liElement = document.createElement('li');
+          
+     //      const imageElement = document.createElement('img');
+     //      imageElement.src = imageItem.sprites[`front_default`].url;
+     //      imageElement.alt = imageItem.name;
 
           
-     })
-};
+     // })
+
+
+
 
 // initialize the app
 pokemonStarterApp.init();
 
 
+
+     
+
+     
+               // name: data.name,
+               // id: data.id,
+               // image: data.sprites['front_default']
 
 
 // have the api call happen inside an event handler 
