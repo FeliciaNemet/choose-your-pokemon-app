@@ -22,14 +22,36 @@ pokemonStarterApp.setUpPokeEventListeners = () => {
           pokemonStarterApp.getPokemon(pokemonStarterApp.findPokemon);
      });
 }
-
+let count = 0
 pokemonStarterApp.makeShinyEventListeners = (pokeObject) => {
-     document.querySelector(`#shiny`).addEventListener(`click`, function () {
-          const pokeFrontImage = document.querySelector(`#poke-front-image`);
-          pokeFrontImage.src = pokeObject[`sprites`][`front_shiny`];
 
-          const pokeBackImage = document.querySelector(`#poke-back-image`);
-          pokeBackImage.src = pokeObject[`sprites`][`back_shiny`];
+     document.querySelector(`#shiny`).addEventListener(`click`, function () {
+          // const pokeFrontImage = document.querySelector(`#poke-front-image`);
+          // pokeFrontImage.src = pokeObject[`sprites`][`front_shiny`];
+
+          // const pokeBackImage = document.querySelector(`#poke-back-image`);
+          // pokeBackImage.src = pokeObject[`sprites`][`back_shiny`];
+
+          
+          if (count === 0) {
+               const pokeFrontImage = document.querySelector(`#poke-front-image`);
+               pokeFrontImage.src = pokeObject[`sprites`][`front_shiny`];
+
+               const pokeBackImage = document.querySelector(`#poke-back-image`);
+               pokeBackImage.src = pokeObject[`sprites`][`back_shiny`];
+
+               count = 1;
+          
+          } else if (count === 1) {
+               const pokeFrontImage = document.querySelector(`#poke-front-image`);
+               pokeFrontImage.src = pokeObject[`sprites`][`front_default`];
+
+               const pokeBackImage = document.querySelector(`#poke-back-image`);
+               pokeBackImage.src = pokeObject[`sprites`][`back_default`];
+               
+               count = 0;
+          }
+
      })
 }
 
@@ -78,7 +100,7 @@ pokemonStarterApp.displayPokers = (pokeObject) => {
      pokeBackImage.src = pokeObject[`sprites`][`back_default`];
 
      const shiny = document.querySelector(`#shiny`);
-     shiny.innerHTML = `shiny ${pokemonStarterApp.findPokemon}`;
+     shiny.innerHTML = ` toggle shiny ${pokemonStarterApp.findPokemon}`;
 
 }
 
