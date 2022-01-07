@@ -235,6 +235,35 @@ html {
   overflow: hidden;
 }
 
+.pokemon-data {
+  border: 2px solid #393939;
+  border-radius: 5px;
+  background-color: #bdae58;
+  -webkit-box-shadow: inset 5px 5px rgba(0, 0, 0, 0.15);
+          box-shadow: inset 5px 5px rgba(0, 0, 0, 0.15);
+  outline: 12px solid #777;
+  max-width: 440px;
+  margin: 50px auto 50px auto;
+}
+
+.pokePicture {
+  position: relative;
+  z-index: 10;
+}
+
+.pokePicture::before {
+  content: "";
+  width: 55px;
+  height: 15px;
+  border-radius: 50%;
+  background: #7b7b7b;
+  display: block;
+  position: absolute;
+  bottom: 39px;
+  left: 42px;
+  z-index: -10;
+}
+
 body {
   background-color: lightgray;
 }
