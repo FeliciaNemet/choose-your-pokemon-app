@@ -23,6 +23,16 @@ pokemonStarterApp.setUpPokeEventListeners = () => {
      });
 }
 
+pokemonStarterApp.makeShinyEventListeners = (pokeObject) => {
+     document.querySelector(`#shiny`).addEventListener(`click`, function () {
+          const pokeFrontImage = document.querySelector(`#poke-front-image`);
+          pokeFrontImage.src = pokeObject[`sprites`][`front_shiny`];
+
+          const pokeBackImage = document.querySelector(`#poke-back-image`);
+          pokeBackImage.src = pokeObject[`sprites`][`back_shiny`];
+     })
+}
+
 pokemonStarterApp.getPokemon = (id) => {
      if (!id) return;
    // store the api URL as a property on the app
@@ -44,6 +54,8 @@ pokemonStarterApp.getPokemon = (id) => {
 
           pokemonStarterApp.displayPokers(myPokemon);
          // pokemonStarterApp.removePokeClasses(id);
+          // declare here..
+          pokemonStarterApp.makeShinyEventListeners(myPokemon);
           pokemonStarterApp.addPokeClasses(id);
           });
 }
@@ -64,6 +76,9 @@ pokemonStarterApp.displayPokers = (pokeObject) => {
 
      const pokeBackImage = document.querySelector(`#poke-back-image`);
      pokeBackImage.src = pokeObject[`sprites`][`back_default`];
+
+     const shiny = document.querySelector(`#shiny`);
+     shiny.innerHTML = `shiny ${pokemonStarterApp.findPokemon}`;
 
 }
 
