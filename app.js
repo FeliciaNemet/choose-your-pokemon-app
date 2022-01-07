@@ -57,9 +57,11 @@ pokemonStarterApp.displayPokers = (pokeObject) => {
      const pokeNumber = document.querySelector(`#poke-number`);
      pokeNumber.innerHTML = pokeObject.id;
 
-     const pokeType = document.querySelector(`#poke-type`); 
-     pokeType.innerHTML = pokeObject.types.type.map();
+     // const pokeType = document.querySelector(`#poke-type`); 
+     // pokeType.innerHTML = pokeObject.types.type.map();
      
+     const pokeType = pokeObject.types[0].type.name;
+     console.log(pokeType)
 
      const pokeFrontImage = document.querySelector(`#poke-front-image`);
      pokeFrontImage.src = pokeObject[`sprites`][`front_default`];
