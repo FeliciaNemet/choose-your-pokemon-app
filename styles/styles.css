@@ -277,7 +277,7 @@ body {
 }
 
 .bulbasaur-styles {
-  color: purple;
+  color: green;
 }
 
 .pikachu-styles {
@@ -425,6 +425,13 @@ label {
 }
 
 select {
+  text-transform: uppercase;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  background-color: darkcyan;
+  border: none;
+}
+
+.shiny {
   text-transform: uppercase;
   font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
   background-color: darkcyan;

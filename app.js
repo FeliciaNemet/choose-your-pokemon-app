@@ -22,6 +22,38 @@ pokemonStarterApp.setUpPokeEventListeners = () => {
           pokemonStarterApp.getPokemon(pokemonStarterApp.findPokemon);
      });
 }
+let count = 0
+pokemonStarterApp.makeShinyEventListeners = (pokeObject) => {
+
+     document.querySelector(`#shiny`).addEventListener(`click`, function () {
+          // const pokeFrontImage = document.querySelector(`#poke-front-image`);
+          // pokeFrontImage.src = pokeObject[`sprites`][`front_shiny`];
+
+          // const pokeBackImage = document.querySelector(`#poke-back-image`);
+          // pokeBackImage.src = pokeObject[`sprites`][`back_shiny`];
+
+          
+          if (count === 0) {
+               const pokeFrontImage = document.querySelector(`#poke-front-image`);
+               pokeFrontImage.src = pokeObject[`sprites`][`front_shiny`];
+
+               const pokeBackImage = document.querySelector(`#poke-back-image`);
+               pokeBackImage.src = pokeObject[`sprites`][`back_shiny`];
+
+               count = 1;
+          
+          } else if (count === 1) {
+               const pokeFrontImage = document.querySelector(`#poke-front-image`);
+               pokeFrontImage.src = pokeObject[`sprites`][`front_default`];
+
+               const pokeBackImage = document.querySelector(`#poke-back-image`);
+               pokeBackImage.src = pokeObject[`sprites`][`back_default`];
+               
+               count = 0;
+          }
+
+     })
+}
 
 pokemonStarterApp.getPokemon = (id) => {
      if (!id) return;
@@ -44,6 +76,8 @@ pokemonStarterApp.getPokemon = (id) => {
 
           pokemonStarterApp.displayPokers(myPokemon);
          // pokemonStarterApp.removePokeClasses(id);
+          // declare here..
+          pokemonStarterApp.makeShinyEventListeners(myPokemon);
           pokemonStarterApp.addPokeClasses(id);
           });
 }
@@ -64,6 +98,9 @@ pokemonStarterApp.displayPokers = (pokeObject) => {
 
      const pokeBackImage = document.querySelector(`#poke-back-image`);
      pokeBackImage.src = pokeObject[`sprites`][`back_default`];
+
+     const shiny = document.querySelector(`#shiny`);
+     shiny.innerHTML = ` toggle shiny ${pokemonStarterApp.findPokemon}`;
 
 }
 

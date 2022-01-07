@@ -16,7 +16,7 @@ body {
      color: red;
 }
 .bulbasaur-styles {
-     color: purple;
+     color: green;
 }
 .pikachu-styles {
      color: yellow;
@@ -135,6 +135,12 @@ select {
      border: none; 
 }
 
+.shiny {
+     text-transform: uppercase;
+     font-family: $buttonFont;
+     background-color: darkcyan;
+     border: none;   
+}
 
 .pokemon-data{
      display: flex;
