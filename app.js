@@ -22,16 +22,13 @@ pokemonStarterApp.setUpPokeEventListeners = () => {
           pokemonStarterApp.getPokemon(pokemonStarterApp.findPokemon);
      });
 }
+
+
 let count = 0
+
 pokemonStarterApp.makeShinyEventListeners = (pokeObject) => {
 
      document.querySelector(`#shiny`).addEventListener(`click`, function () {
-          // const pokeFrontImage = document.querySelector(`#poke-front-image`);
-          // pokeFrontImage.src = pokeObject[`sprites`][`front_shiny`];
-
-          // const pokeBackImage = document.querySelector(`#poke-back-image`);
-          // pokeBackImage.src = pokeObject[`sprites`][`back_shiny`];
-
           
           if (count === 0) {
                const pokeFrontImage = document.querySelector(`#poke-front-image`);
