@@ -239,6 +239,22 @@ body {
   background-color: lightgray;
 }
 
+.squirtle-styles {
+  color: blue;
+}
+
+.charmander-styles {
+  color: red;
+}
+
+.bulbasaur-styles {
+  color: purple;
+}
+
+.pikachu-styles {
+  color: yellow;
+}
+
 .wrapper {
   max-width: 1200px;
   margin: 0 auto;
