@@ -1,45 +1,45 @@
 .pokemon-data {
-   border: 2px solid #393939;
-   border-radius: 5px;
-   background-color: #bdae58;
-   box-shadow: inset 5px 5px rgba(0, 0, 0, 0.15);
-   outline: 12px solid #777;
-   max-width: 440px;
-   margin: 50px auto 50px auto;
+    border: 2px solid #393939;
+    border-radius: 5px;
+    background-color: #bdae58;
+    box-shadow: inset 5px 5px rgba(0, 0, 0, 0.15);
+    outline: 12px solid #777;
+    max-width: 440px;
+    margin: 50px auto 50px auto;
 }
 
 .pokePicture {
-   position: relative;
-   z-index: 10;
+    position: relative;
+    z-index: 10;
 }
 
 
 .pokePicture::before {
-   content : '';
-   width: 55px;
-   height: 15px;
-   border-radius: 50%;  
-   background: #7b7b7b;
-   display: block;
-   position: absolute;
-   bottom: 39px;
-   left: 42px;
-   z-index: -10;
+    content : '';
+    width: 55px;
+    height: 15px;
+    border-radius: 50%;  
+    background: #9f913e;
+    display: block;
+    position: absolute;
+    bottom: 39px;
+    left: 42px;
+    z-index: -10;
 }
 
 .squirtle-styles {
-   color: blue;
-   text-shadow: 2px 2px 1px darkblue;
+    color: #9fd5dd;
+    text-shadow: 2px 2px 1px #297383;
 }
 .charmander-styles {
-   color: red;
-   text-shadow: 2px 2px 1px darkred;
+    color: #ec6f3c;
+    text-shadow: 2px 2px 1px #b7442d;
 }
 .bulbasaur-styles {
-   color: green;
-   text-shadow: 2px 2px 1px darkgreen;
+    color: #66cab1;
+    text-shadow: 2px 2px 1px #266a6a;
 }
 .pikachu-styles {
-   color: yellow;
-   text-shadow: 2px 2px 1px orange;
+    color: #f6e757;
+    text-shadow: 2px 2px 1px #d98f00;
 }

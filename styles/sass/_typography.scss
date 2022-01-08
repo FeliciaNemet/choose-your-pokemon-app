@@ -1,2 +1,14 @@
+html {
+  font-size: 125%; /* 16px * 1.25 = 20px */
+}
+
 $headerFont: 'Press Start 2P', cursive;
-$buttonFont: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+$buttonFont: 'Teko', sans-serif;
+
+
+@mixin font-details($font-size, $line-height, $letter-spacing, $font-weight) {
+    font-size: $font-size;
+    line-height: $line-height;
+    letter-spacing: $letter-spacing;  
+    font-weight: $font-weight;   
+}
