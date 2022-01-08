@@ -89,7 +89,7 @@ pokemonStarterApp.displayPokers = (pokeObject) => {
 pokemonStarterApp.addPokeClasses = (id) => {
      const pokeName = document.querySelector(`#poke-name`);
 
-     pokeName.removeAttribute("class");
+     pokeName.removeAttribute('class');
      pokeName.classList.add(`${id}-styles`);
 };
 

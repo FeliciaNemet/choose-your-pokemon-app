@@ -1,6 +1,9 @@
 $headerFont: 'Press Start 2P', cursive;
 $buttonFont: 'Teko', sans-serif;
 
+$ruby-red: #A93671;
+$charcoal: #262626;
+
 html {
   font-size: 125%; /* 16px * 1.25 = 20px */
 }
@@ -33,10 +36,9 @@ h3 {
 
 h4 {
      text-transform: uppercase;
-     color: $charcoal;
+     padding: 15px;
      font-family: 'Teko', sans-serif;
-     text-align: center;
-     font-size: 1.5rem;
+     letter-spacing: 2px;
 }
 
 p {
