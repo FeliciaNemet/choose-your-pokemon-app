@@ -264,10 +264,6 @@ html {
   z-index: -10;
 }
 
-body {
-  background-color: lightgray;
-}
-
 .squirtle-styles {
   color: blue;
 }
@@ -282,6 +278,10 @@ body {
 
 .pikachu-styles {
   color: yellow;
+}
+
+body {
+  background-color: lightgray;
 }
 
 .wrapper {
@@ -473,4 +473,24 @@ select {
 .pokeStats h3 {
   text-transform: uppercase;
   padding: 15px;
+}
+
+footer {
+  background-color: #262626;
+  margin-top: 70px;
+  padding: 20px 0;
+}
+footer .credits {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+footer a, footer p {
+  color: white;
+}
+footer a:hover {
+  color: #A93671;
 }
