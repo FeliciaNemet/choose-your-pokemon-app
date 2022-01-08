@@ -10,6 +10,7 @@ const pokemonStarterApp = {};
 pokemonStarterApp.init = () => {
      pokemonStarterApp.setUpPokeEventListeners();
      pokemonStarterApp.getPokemon();
+     
 };
 
 pokemonStarterApp.setUpPokeEventListeners = () => {
@@ -21,6 +22,7 @@ pokemonStarterApp.setUpPokeEventListeners = () => {
 
           pokemonStarterApp.getPokemon(pokemonStarterApp.findPokemon);
      });
+
 }
 
 
