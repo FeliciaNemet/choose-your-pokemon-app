@@ -1,6 +1,6 @@
 @import "setup";
 @import "typography";
-@import "squirtle-styles";
+@import "pokemon-styles";
 @import "media-queries";
 
 
@@ -100,7 +100,8 @@ option {
      background-color: $ruby-red;
      color: white;
      border: none;
-     padding: .5em;   
+     padding: .5em;
+     border-radius: 5px 5px 0 0;   
 }
 
 .pokemon-data {
