@@ -436,6 +436,7 @@ select {
   font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
   background-color: darkcyan;
   border: none;
+  padding: 0.5em;
 }
 
 .pokemon-data {

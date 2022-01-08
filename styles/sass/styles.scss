@@ -119,14 +119,15 @@ select {
    text-transform: uppercase;
    font-family: $buttonFont;
    background-color: darkcyan;
-   border: none; 
+   border: none;
 }
 
 .shiny {
    text-transform: uppercase;
    font-family: $buttonFont;
    background-color: darkcyan;
-   border: none;   
+   border: none;
+   padding: .5em;   
 }
 
 .pokemon-data{
