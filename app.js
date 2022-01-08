@@ -10,6 +10,7 @@ const pokemonStarterApp = {};
 pokemonStarterApp.init = () => {
      pokemonStarterApp.setUpPokeEventListeners();
      pokemonStarterApp.getPokemon();
+     
 };
 
 pokemonStarterApp.setUpPokeEventListeners = () => {
@@ -18,11 +19,14 @@ pokemonStarterApp.setUpPokeEventListeners = () => {
 
       // console.log(pokemonStarterApp.findPokemon);  
       // ^ this is displaying the value (name of pokemon)
-
+          
           pokemonStarterApp.getPokemon(pokemonStarterApp.findPokemon);
+          
      });
 }
+
 let count = 0
+
 pokemonStarterApp.makeShinyEventListeners = (pokeObject) => {
 
      document.querySelector(`#shiny`).addEventListener(`click`, function () {
@@ -50,7 +54,7 @@ pokemonStarterApp.makeShinyEventListeners = (pokeObject) => {
                pokeBackImage.src = pokeObject[`sprites`][`back_default`];
                
                count = 0;
-          }
+          } 
 
      })
 }
