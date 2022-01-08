@@ -26,45 +26,42 @@ pokemonStarterApp.makeShinyEventListeners = (pokeObject) => {
      document.querySelector(`#shiny`).addEventListener(`click`, function () {
 
           if (count === 0) {
-          const pokeFrontImage = document.querySelector(`#poke-front-image`);
-          pokeFrontImage.src = pokeObject[`sprites`][`front_shiny`];
+               const pokeFrontImage = document.querySelector(`#poke-front-image`);
+               pokeFrontImage.src = pokeObject[`sprites`][`front_shiny`];
 
-          const pokeBackImage = document.querySelector(`#poke-back-image`);
-          pokeBackImage.src = pokeObject[`sprites`][`back_shiny`];
+               const pokeBackImage = document.querySelector(`#poke-back-image`);
+               pokeBackImage.src = pokeObject[`sprites`][`back_shiny`];
 
-          count = 1;
+               count = 1;
 
           } else if (count === 1) {
-          const pokeFrontImage = document.querySelector(`#poke-front-image`);
-          pokeFrontImage.src = pokeObject[`sprites`][`front_default`];
+               const pokeFrontImage = document.querySelector(`#poke-front-image`);
+               pokeFrontImage.src = pokeObject[`sprites`][`front_default`];
 
-          const pokeBackImage = document.querySelector(`#poke-back-image`);
-          pokeBackImage.src = pokeObject[`sprites`][`back_default`];
+               const pokeBackImage = document.querySelector(`#poke-back-image`);
+               pokeBackImage.src = pokeObject[`sprites`][`back_default`];
 
-          count = 0;
-     }
+               count = 0;
+          }
      })
 };
 
 pokemonStarterApp.getPokemon = (id) => {
      if (!id) return;
-   // store the api URL as a property on the app
+
      const url = `https://pokeapi.co/api/v2/pokemon/${id}?limit=150`;
-   // url.search = new URLSearchParams({
-   //      q: 'query'
-   // });
 
      fetch(url)
           .then((response) => {
-          return response.json();
+               return response.json();
           })
           .then((jsonResult) => {
-          const myPokemon = jsonResult;
-          console.log(myPokemon);
+               const myPokemon = jsonResult;
+               // console.log(myPokemon);
 
-          pokemonStarterApp.displayPokers(myPokemon);
-          pokemonStarterApp.makeShinyEventListeners(myPokemon);
-          pokemonStarterApp.addPokeClasses(id);
+               pokemonStarterApp.displayPokers(myPokemon);
+               pokemonStarterApp.makeShinyEventListeners(myPokemon);
+               pokemonStarterApp.addPokeClasses(id);
           });
 };
 
@@ -74,7 +71,7 @@ pokemonStarterApp.displayPokers = (pokeObject) => {
      pokeName.innerHTML = pokemonStarterApp.findPokemon;
 
      const pokeNumber = document.querySelector(`#poke-number`);
-     pokeNumber.innerHTML = pokeObject.id;
+     pokeNumber.innerHTML = `${pokeObject.id}. `;
 
      const pokeType = document.querySelector(`#poke-type`);
      pokeType.innerHTML = pokeObject.types[0].type.name;
@@ -92,8 +89,8 @@ pokemonStarterApp.displayPokers = (pokeObject) => {
 pokemonStarterApp.addPokeClasses = (id) => {
      const pokeName = document.querySelector(`#poke-name`);
 
-    pokeName.removeAttribute("class");
-    pokeName.classList.add(`${id}-styles`);
+     pokeName.removeAttribute("class");
+     pokeName.classList.add(`${id}-styles`);
 };
 
 // initialize the app
