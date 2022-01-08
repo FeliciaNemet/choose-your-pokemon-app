@@ -16,11 +16,11 @@ body {
      width: 90%;
 }
 
-.myForm {
+.my-form {
      text-align: center;
 }
 
-.masterBox {
+.master-box {
      display: flex;
      flex-direction: row;
      text-align: center;
@@ -116,16 +116,16 @@ option {
      }
 }
 
-.pokePicture img{
+.poke-picture img{
      height: 150px;
 }
 
-.pokeStats {
+.poke-stats {
      display: flex;
      flex-direction: row;
      justify-content: space-between;
 
-          h3 {
+          h4 {
           text-transform: uppercase;
           padding: 15px;
      }
