@@ -3,8 +3,7 @@
 @import "squirtle-styles";
 @import "media-queries";
 
-$ruby-red: #A93671;
-$charcoal: #262626;
+
 
 body {
      background-color: lightgray;
@@ -16,11 +15,11 @@ body {
      width: 90%;
 }
 
-.myForm {
+.my-form {
      text-align: center;
 }
 
-.masterBox {
+.master-box {
      display: flex;
      flex-direction: row;
      text-align: center;
@@ -69,7 +68,7 @@ body {
      background-image: radial-gradient(white 60%, #757F7A)
 }
 
-.ball:hover{
+.ball:hover {
      transition-duration: .2s;
      transform: rotate(5deg);
 /*   transform: rotate(0deg); */
@@ -104,7 +103,7 @@ option {
      padding: .5em;   
 }
 
-.pokemon-data{
+.pokemon-data {
      display: flex;
      justify-content: center;
      align-items: center;
@@ -116,19 +115,14 @@ option {
      }
 }
 
-.pokePicture img{
+.poke-picture img {
      height: 150px;
 }
 
-.pokeStats {
+.poke-stats {
      display: flex;
      flex-direction: row;
      justify-content: space-between;
-
-          h3 {
-          text-transform: uppercase;
-          padding: 15px;
-     }
 }
 
 footer {

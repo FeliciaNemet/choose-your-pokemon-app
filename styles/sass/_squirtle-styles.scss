@@ -8,12 +8,12 @@
     margin: 50px auto 50px auto;
 }
 
-.pokePicture {
+.poke-picture {
     position: relative;
     z-index: 10;
 }
 
-.pokePicture::before {
+.poke-picture::before {
     content : '';
     width: 55px;
     height: 15px;
