@@ -9,9 +9,12 @@
 // }
 
 
-// @media(max-width: 480px) {
-     
+@media(max-width: 480px) {
+     .credits {
+          display: flex;
+          flex-direction: column;
+     }
 
 
 
-// }
+}

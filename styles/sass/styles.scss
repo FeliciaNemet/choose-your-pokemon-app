@@ -104,6 +104,10 @@ option {
      border-radius: 5px 5px 0 0;   
 }
 
+.shiny:hover {
+     color: $charcoal;
+}
+
 .pokemon-data {
      display: flex;
      justify-content: center;
