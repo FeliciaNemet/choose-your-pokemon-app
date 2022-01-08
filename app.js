@@ -8,8 +8,14 @@ const pokemonStarterApp = {};
 
 // create init function
 pokemonStarterApp.init = () => {
+<<<<<<< HEAD
    pokemonStarterApp.setUpPokeEventListeners();
    pokemonStarterApp.getPokemon();
+=======
+     pokemonStarterApp.setUpPokeEventListeners();
+     pokemonStarterApp.getPokemon();
+     
+>>>>>>> 86874fbc21d56e7fc1c6f26eee8fa944081ffb31
 };
 
 pokemonStarterApp.setUpPokeEventListeners = () => {
@@ -18,10 +24,22 @@ pokemonStarterApp.setUpPokeEventListeners = () => {
 
       // console.log(pokemonStarterApp.findPokemon);  
       // ^ this is displaying the value (name of pokemon)
+<<<<<<< HEAD
 
       pokemonStarterApp.getPokemon(pokemonStarterApp.findPokemon);
    });
 }
+=======
+          
+          pokemonStarterApp.getPokemon(pokemonStarterApp.findPokemon);
+          
+     });
+}
+
+let count = 0
+
+pokemonStarterApp.makeShinyEventListeners = (pokeObject) => {
+>>>>>>> 86874fbc21d56e7fc1c6f26eee8fa944081ffb31
 
 
 let count = 0
@@ -42,12 +60,12 @@ pokemonStarterApp.makeShinyEventListeners = (pokeObject) => {
          } else if (count === 1) {
             const pokeFrontImage = document.querySelector(`#poke-front-image`);
             pokeFrontImage.src = pokeObject[`sprites`][`front_default`];
-
+               
             const pokeBackImage = document.querySelector(`#poke-back-image`);
-            pokeBackImage.src = pokeObject[`sprites`][`back_default`];
-            
-            count = 0;
-         }
+               pokeBackImage.src = pokeObject[`sprites`][`back_default`];
+               
+               count = 0;
+         } 
 
    })
 }
