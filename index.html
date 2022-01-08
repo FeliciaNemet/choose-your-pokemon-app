@@ -10,103 +10,95 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Teko:wght@700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./styles/styles.css">
-
 </head>
 
 <body>
-     <header>
-          <div class="wrapper masterBox">
-          <div class="container">
-               <div class="ball">
+    <header>
+        <div class="wrapper masterBox">           
+            <div class="container"> <!-- pokeball container starts -->
+                <div class="ball">
                     <div class="center">
-                    <div class="center2">
+                        <div class="center2"></div>
                     </div>
-               </div>
-               </div>
-          </div>
-          <div class="secondBox">
-               <h1>Choose Your Starter</h1>
-               <h3>Please select your starter pokemon below.</h3>
-          </div>
-          <div class="container">
-               <div class="ball">
-               <div class="center">
-                    <div class="center2">
+                </div>
+            </div> <!-- pokeball container ends -->
+
+            <h1>Choose Your Starter</h1>
+
+            <div class="container"> <!-- pokeball container starts -->
+                <div class="ball">
+                    <div class="center">
+                        <div class="center2"></div>
                     </div>
-               </div>
-               </div>
-          </div>
-          </div>
-</header>
+                </div>
+            </div> <!-- pokeball container ends -->
+        </div> <!-- wrapper ends -->
+    </header>
+
 <main>
-     <div class="wrapper">
+    <div class="wrapper">
+    <h2>Please select your starter pokemon below.</h2>
+        <form action="" class="myForm" name="myForm">
+            <label for="pokemonChoice">Which pokemon?</label>
+            <select name="pokemonChoice" id="pokemonChoice">
+                <option value disabled selected>Please choose a starter</option>
+                <option value="bulbasaur">Bulbasaur</option>
+                <option value="charmander">Charmander</option>
+                <option value="squirtle">Squirtle</option>
+                <option value="pikachu">Pikachu</option>
+                <option value="vulpix">Vulpix</option>
+                <option value="psyduck">Psyduck</option>
+                <option value="growlithe">Growlithe</option>
+                <option value="poliwag">Poliwag</option>
+                <option value="tentacool">Tentacool</option>
+                <option value="ponyta">Ponyta</option>
+                <option value="slowpoke">Slowpoke</option>
+                <option value="magnemite">Magnemite</option>
+                <option value="seel">Seel</option>
+                <option value="shelder">Shellder</option>
+                <option value="krabby">Krabby</option>
+                <option value="voltorb">Voltorb</option>
+                <option value="exeggcute">Exeggcute</option>
+                <option value="tangela">Tangela</option>
+                <option value="horsea">Horsea</option>
+                <option value="goldeen">Goldeen</option>
+                <option value="staryu">Staryu</option>
+                <option value="magikarp">Magikarp</option>
+                <option value="lapras">Lapras</option>
+            </select>
+        </form>
+    </div> <!-- wrapper ends -->
 
-          <form action="" class="myForm" name="myForm">
-               <label for="pokemonChoice">Which pokemon?</label>
-               <select name="pokemonChoice" id="pokemonChoice">
-                    <option value disabled selected>Please choose a starter</option>
-                    <option value="bulbasaur">Bulbasaur</option>
-                    <option value="charmander">Charmander</option>
-                    <option value="squirtle">Squirtle</option>
-                    <option value="pikachu">Pikachu</option>
-                    <option value="vulpix">Vulpix</option>
-                    <option value="psyduck">Psyduck</option>
-                    <option value="growlithe">Growlithe</option>
-                    <option value="poliwag">Poliwag</option>
-                    <option value="tentacool">Tentacool</option>
-                    <option value="ponyta">Ponyta</option>
-                    <option value="slowpoke">Slowpoke</option>
-                    <option value="magnemite">Magnemite</option>
-                    <option value="seel">Seel</option>
-                    <option value="shelder">Shelder</option>
-                    <option value="krabby">Krabby</option>
-                    <option value="voltorb">voltorb</option>
-                    <option value="exeggcute">Exeggcute</option>
-                    <option value="tangela">Tangela</option>
-                    <option value="horsea">Horsea</option>
-                    <option value="goldeen">Goldeen</option>
-                    <option value="staryu">Staryu</option>
-                    <option value="magikarp">Magikarp</option>
-                    <option value="lapras">Lapras</option>
-               </select>
-          </form>
-
-          <div class="wrapper">
-               <div class="pokemon-data" id="poke-buddies">
-                    <div class="poke-badge" id="poke-badge">
-                         <img src="" alt="">
-                    </div>
-               <!-- API data goes here -->
-                    <div class="pokePicture">    
-                         <img src="" alt="" class="poke-front-image" id="poke-front-image">
-                         <img src="" alt="" class="poke-back-image" id="poke-back-image">
-                    </div>
-                    <h2 id="poke-name"></h2>
-                    <div class="pokeStats">
-                         <h3 class="poke-number" id="poke-number"></h3>
-                         <h3 class="poke-type" id="poke-type"></h3>
-                    </div>
-                    <!-- <div class="poke-shiny-button"> -->
-                         <button class="shiny" id="shiny"></button>
-                    <!-- </div> -->
-               </div>
-          </div>
-
-     </div> <!-- wrapper ends -->
-
+    <div class="wrapper">
+        <div class="pokemon-data" id="poke-buddies">
+            <div class="poke-badge" id="poke-badge">
+                <img src="" alt="">
+            </div>
+            <!-- API data goes here -->
+            <div class="pokePicture">    
+                <img src="" alt="" class="poke-front-image" id="poke-front-image">
+                <img src="" alt="" class="poke-back-image" id="poke-back-image">
+            </div>
+            <h3 id="poke-name"></h3>
+            <div class="pokeStats">
+                <h4 class="poke-number" id="poke-number"></h4>
+                <h4 class="poke-type" id="poke-type"></h4>
+            </div>
+            <button class="shiny" id="shiny"></button>
+        </div>
+    </div> <!-- wrapper ends -->
 </main>
 
-     <footer>
-          <div class="wrapper">
-               <div class="credits">
-               <p>Created @ <a href="https://junocollege.com/" target="blank">Juno College of Technology</a></p>
-               <p> Data courtesy of the <a href="https://pokeapi.co/docs/v2" target="blank">PokeApi.co</a></p>
-               </div>
-               <p>Developed by Karen Evans & Felicia Nemet</p>
-          </div>
-     </footer>
+<footer>
+    <div class="wrapper">
+        <div class="credits">
+            <p>Created @ <a href="https://junocollege.com/" target="blank">Juno College of Technology</a></p>
+            <p>Data courtesy of the <a href="https://pokeapi.co/docs/v2" target="blank">PokeApi.co</a></p>
+        </div>
+        <p>Developed by Karen Evans & Felicia Nemet</p>
+    </div>
+</footer>
 
 <script src="./app.js"></script>
 </body>
-
 </html>

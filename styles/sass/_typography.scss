@@ -1,14 +1,43 @@
+$headerFont: 'Press Start 2P', cursive;
+$buttonFont: 'Teko', sans-serif;
+
 html {
   font-size: 125%; /* 16px * 1.25 = 20px */
 }
 
-$headerFont: 'Press Start 2P', cursive;
-$buttonFont: 'Teko', sans-serif;
-
-
-@mixin font-details($font-size, $line-height, $letter-spacing, $font-weight) {
-    font-size: $font-size;
-    line-height: $line-height;
-    letter-spacing: $letter-spacing;  
-    font-weight: $font-weight;   
+h1 {
+    text-transform: uppercase;
+    text-align: center;
+    font-family: $headerFont;
+    color: darkcyan;
+    text-shadow: 4px 4px 1px $charcoal;
+    letter-spacing: 1px;
 }
+
+h2 {
+    text-transform: uppercase;
+    color: $charcoal;
+    font-family: 'Teko', sans-serif;
+    font-size: 1.5rem;
+    letter-spacing: 2px;
+    text-align: center;
+}
+
+h3 {
+    text-transform: uppercase;
+    color: $charcoal;
+    font-family: 'Teko', sans-serif;
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+p {
+    text-align: center;
+    font-family: $buttonFont;
+}
+
+a {
+    text-decoration: none;
+    color: $charcoal;
+}
+

@@ -89,32 +89,11 @@ pokemonStarterApp.displayPokers = (pokeObject) => {
      shiny.innerHTML = `toggle shiny ${pokemonStarterApp.findPokemon}`;
 };
 
-pokemonStarterApp.addPokeClasses = (pokemonName) => {
+pokemonStarterApp.addPokeClasses = (id) => {
      const pokeName = document.querySelector(`#poke-name`);
 
-   // add squirtle styles
-     if (pokemonName === 'squirtle') {
-          pokeName.removeAttribute("class");
-          pokeName.classList.add(`squirtle-styles`);
-     };
-
-   // add bulbasaur styles
-     if (pokemonName === 'bulbasaur') {
-          pokeName.removeAttribute("class");
-          pokeName.classList.add(`bulbasaur-styles`);
-     };
-
-   // add pikachu styles
-     if (pokemonName === 'pikachu') {
-          pokeName.removeAttribute("class");
-          pokeName.classList.add(`pikachu-styles`);
-     };
-
-   // add charmander styles
-     if (pokemonName === 'charmander') {
-          pokeName.removeAttribute("class");
-          pokeName.classList.add(`charmander-styles`);
-     };
+    pokeName.removeAttribute("class");
+    pokeName.classList.add(`${id}-styles`);
 };
 
 // initialize the app

@@ -16,38 +16,6 @@ body {
     width: 90%;
 }
 
-h1 {
-    text-transform: uppercase;
-    text-align: center;
-    font-family: $headerFont;
-    color: darkcyan;
-    text-shadow: 4px 4px 1px $charcoal;
-}
-
-h2 {
-    text-transform: uppercase;
-    color: darkcyan;
-    font-family: $buttonFont;
-    font-size: 2rem;
-    letter-spacing: 2px;
-}
-
-h3 {
-    text-transform: uppercase;
-    color: $charcoal;
-    font-family: $buttonFont;
-}
-
-p {
-    text-align: center;
-    font-family: $buttonFont;
-}
-
-a {
-    text-decoration: none;
-    color: $charcoal;
-}
-
 .myForm {
     text-align: center;
 }
@@ -57,12 +25,6 @@ a {
     flex-direction: row;
     text-align: center;
     justify-content: center;
-}
-
-.secondBox {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
 }
 
 // Found a really neat pokeball gradient credit to : https://codepen.io/blakeworsley/pen/pbdqBK 
@@ -78,10 +40,10 @@ a {
     width: 100px;  
     border-radius: 100px;
     display: flex;
-    border: 5px black solid;
+    border: 5px $charcoal solid;
     justify-content: center;
     align-items: center;
-    background-image: linear-gradient(#7D1827 5%, red 49%, black 5%, white 49%, #CADBD1);
+    background-image: linear-gradient(#7D1827 5%, red 49%, $charcoal 5%, white 49%, #CADBD1);
     margin: 10px;
 }
 
@@ -116,9 +78,17 @@ a {
 label {
     text-transform: uppercase;
     font-family: $buttonFont;
+    letter-spacing: 1px;
 }
 
 select {
+    text-transform: uppercase;
+    font-family: $buttonFont;
+    background-color: darkcyan;
+    border: none;
+}
+
+option {
     text-transform: uppercase;
     font-family: $buttonFont;
     background-color: darkcyan;
@@ -139,6 +109,11 @@ select {
     justify-content: center;
     align-items: center;
     flex-direction: column;
+
+    h3 {
+        font-family: 'Teko', sans-serif;
+        letter-spacing: 2px;
+    }
 }
 
 .pokePicture img{

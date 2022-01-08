@@ -235,11 +235,6 @@ html {
   overflow: hidden;
 }
 
-html {
-  font-size: 125%;
-  /* 16px * 1.25 = 20px */
-}
-
 .pokemon-data {
   border: 2px solid #393939;
   border-radius: 5px;
@@ -289,14 +284,13 @@ html {
   text-shadow: 2px 2px 1px #d98f00;
 }
 
-body {
-  background-color: lightgray;
+html {
+  font-size: 125%;
+  /* 16px * 1.25 = 20px */
 }
 
-.wrapper {
-  max-width: 1200px;
-  margin: 0 auto;
-  width: 90%;
+body {
+  background-color: lightgray;
 }
 
 h1 {
@@ -305,20 +299,24 @@ h1 {
   font-family: "Press Start 2P", cursive;
   color: darkcyan;
   text-shadow: 4px 4px 1px #262626;
+  letter-spacing: 1px;
 }
 
 h2 {
   text-transform: uppercase;
-  color: darkcyan;
+  color: #262626;
   font-family: "Teko", sans-serif;
-  font-size: 2rem;
+  font-size: 1.5rem;
   letter-spacing: 2px;
+  text-align: center;
 }
 
 h3 {
   text-transform: uppercase;
   color: #262626;
   font-family: "Teko", sans-serif;
+  text-align: center;
+  font-size: 1.5rem;
 }
 
 p {
@@ -329,6 +327,12 @@ p {
 a {
   text-decoration: none;
   color: #262626;
+}
+
+.wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 90%;
 }
 
 .myForm {
@@ -347,19 +351,6 @@ a {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-}
-
-.secondBox {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
 }
 
 .container {
@@ -432,9 +423,17 @@ a {
 label {
   text-transform: uppercase;
   font-family: "Teko", sans-serif;
+  letter-spacing: 1px;
 }
 
 select {
+  text-transform: uppercase;
+  font-family: "Teko", sans-serif;
+  background-color: darkcyan;
+  border: none;
+}
+
+option {
   text-transform: uppercase;
   font-family: "Teko", sans-serif;
   background-color: darkcyan;
@@ -464,6 +463,10 @@ select {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+}
+.pokemon-data h3 {
+  font-family: "Teko", sans-serif;
+  letter-spacing: 2px;
 }
 
 .pokePicture img {
