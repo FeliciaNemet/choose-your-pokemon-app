@@ -1,30 +1,16 @@
-// @media(max-width: 940px) {
-// }
-
-
-
-// @media(max-width: 767px) {
-
-
-// }
-
-
 @media(max-width: 480px) {
-     .credits {
-          display: flex;
-          flex-direction: column;
+     .hide {
+          display: none;
      }
 
-     .poke-picture {
-          flex-direction: column;
-     }
-
+     .credits,
+     .poke-picture,
      .master-box {
           flex-direction: column;
      }
 
-     .hide {
-          display: none;
+     .shiny {
+          width: 90%;
      }
 }
 

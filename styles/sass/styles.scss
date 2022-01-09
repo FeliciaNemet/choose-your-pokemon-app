@@ -3,19 +3,14 @@
 @import "pokemon-styles";
 @import "pokeballs";
 
-
 body {
-     background-color: lightgray;
+     background-color: $light-gray;
 }
 
 .wrapper {
      max-width: 1200px;
-     margin: 0 auto;
      width: 90%;
-}
-
-.my-form {
-     text-align: center;
+     margin: 0 auto;
 }
 
 .master-box {
@@ -25,7 +20,12 @@ body {
      justify-content: center;
 }
 
-label {
+.my-form {
+     text-align: center;
+}
+
+label, 
+select {
      text-transform: uppercase;
      font-family: $buttonFont;
      letter-spacing: 1px;
@@ -33,46 +33,10 @@ label {
 }
 
 select {
-     text-transform: uppercase;
-     font-family: $buttonFont;
-     background-color: darkcyan;
+     background-color: $dark-cyan;
      border: none;
-     color: $charcoal;
      padding-left: 5px;
      margin-left: 10px;
-}
-
-.shiny {
-     text-transform: uppercase;
-     font-family: $buttonFont;
-     background-color: $ruby-red;
-     color: white;
-     border: none;
-     padding: .5em;  
-     border-radius: 5px 5px 0 0; 
-}
-
-.shiny:hover {
-     color: $charcoal;
-}
-
-.poke-picture {
-     position: relative;
-     z-index: 10;
-     display: flex;
-}
-
-.poke-picture::before {
-     content : '';
-     width: 55px;
-     height: 15px;
-     border-radius: 50%;  
-     background: #9f913e;
-     display: block;
-     position: absolute;
-     bottom: 39px;
-     left: 42px;
-     z-index: -10;
 }
 
 .pokemon-data {
@@ -91,8 +55,9 @@ select {
      margin: 50px auto 50px auto;
 
      h3 {
-          font-family: 'Teko', sans-serif;
+          font-family: $buttonFont;
           letter-spacing: 2px;
+          margin: 0;
      }
 }
 
@@ -106,14 +71,51 @@ select {
      }
 }
 
-.poke-picture img {
-     height: 150px;
+.poke-picture {
+     position: relative;
+     z-index: 10;
+     display: flex;
+
+     img {
+          height: 150px;
+     }
+}
+
+.poke-picture::before {
+     content : '';
+     width: 55px;
+     height: 15px;
+     border-radius: 50%;  
+     background: #9f913e;
+     display: block;
+     position: absolute;
+     bottom: 39px;
+     left: 42px;
+     z-index: -10;
 }
 
 .poke-stats {
      display: flex;
      flex-direction: row;
      justify-content: space-between;
+}
+
+.shiny {
+     text-transform: uppercase;
+     font-family: $buttonFont;
+     background-color: $ruby-red;
+     color: white;
+     border: none;
+     width: 70%;
+     padding: 0.5em 0 0.4em 0;  
+     border-radius: 5px 5px 0 0; 
+     margin-top: 15px;
+
+     &:hover,
+     &:focus {
+          color: $charcoal;
+          background-color: lighten($ruby-red, 10);
+     }
 }
 
 footer {

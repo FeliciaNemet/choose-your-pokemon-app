@@ -1,4 +1,6 @@
-// Found a really neat pokeball gradient credit to : https://codepen.io/blakeworsley/pen/pbdqBK 
+// Found a really neat pokeball gradient
+// credit to: https://codepen.io/blakeworsley/pen/pbdqBK 
+// with some small updates by us
 
 .container {
      display: flex;
@@ -6,7 +8,8 @@
      align-items: center;
 }
 
-.ball {
+.ball,
+.ball2 {
      height: 100px;
      width: 100px;  
      border-radius: 100px;
@@ -18,7 +21,8 @@
      margin: 10px;
 }
 
-.center, .center2 {
+.center, 
+.center2 {
      background: white;
      border: 3px $charcoal solid;
 }
@@ -40,8 +44,15 @@
      background-image: radial-gradient(white 60%, #757F7A)
 }
 
-.ball:hover {
+.ball:hover,
+.ball2:hover {
      transition-duration: .2s;
-     transform: rotate(5deg);
-/*   transform: rotate(0deg); */
+}
+
+.ball:hover {
+     transform: rotate(8deg);
+}
+
+.ball2:hover {
+     transform: rotate(-8deg);
 }
