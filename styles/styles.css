@@ -364,12 +364,12 @@ a {
 }
 
 .exeggcute-styles {
-  color: #ffe6c9;
+  color: #d4cabd;
   text-shadow: 2px 2px 1px #fc7d53;
 }
 
 .tangela-styles {
-  color: #85d5fb;
+  color: #85d6fb;
   text-shadow: 2px 2px 1px #ba0238;
 }
 
@@ -379,12 +379,12 @@ a {
 }
 
 .goldeen-styles {
-  color: white;
+  color: #ffffff;
   text-shadow: 2px 2px 1px #e52d00;
 }
 
 .staryu-styles {
-  color: #dd9c3e;
+  color: #dd9b3e;
   text-shadow: 2px 2px 1px #a3692b;
 }
 
@@ -395,7 +395,7 @@ a {
 
 .lapras-styles {
   color: #f9e0a5;
-  text-shadow: 2px 2px 1px #16a1ed;
+  text-shadow: 2px 2px 1px #16a2ed;
 }
 
 .container {
@@ -465,17 +465,6 @@ a {
   /*   transform: rotate(0deg); */
 }
 
-@media (max-width: 480px) {
-  .credits {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-  }
-}
 body {
   background-color: lightgray;
 }
@@ -534,6 +523,9 @@ select {
 .poke-picture {
   position: relative;
   z-index: 10;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .poke-picture::before {
@@ -563,6 +555,7 @@ select {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  position: relative;
   border: 2px solid #393939;
   border-radius: 5px;
   background-color: #bdae58;
@@ -570,11 +563,21 @@ select {
           box-shadow: inset 5px 5px rgba(0, 0, 0, 0.15);
   outline: 12px solid #777;
   max-width: 440px;
+  width: 80%;
   margin: 50px auto 50px auto;
 }
 .pokemon-data h3 {
   font-family: "Teko", sans-serif;
   letter-spacing: 2px;
+}
+
+.poke-badge {
+  position: absolute;
+  top: -40px;
+  right: -40px;
+}
+.poke-badge img {
+  width: 70px;
 }
 
 .poke-picture img {
@@ -606,10 +609,42 @@ footer .credits {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  max-width: 630px;
+  margin: auto;
 }
 footer a, footer p {
   color: white;
 }
 footer a:hover {
   color: #A93671;
+}
+
+@media (max-width: 480px) {
+  .credits {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+
+  .poke-picture {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+
+  .master-box {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+
+  .hide {
+    display: none;
+  }
 }
