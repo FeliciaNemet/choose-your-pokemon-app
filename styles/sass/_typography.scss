@@ -3,6 +3,8 @@ $buttonFont: 'Teko', sans-serif;
 
 $ruby-red: #A93671;
 $charcoal: #262626;
+$dark-cyan: #008b8b;
+$light-gray: #d3d3d3;
 
 html {
   font-size: 125%; /* 16px * 1.25 = 20px */
@@ -12,33 +14,28 @@ h1 {
      text-transform: uppercase;
      text-align: center;
      font-family: $headerFont;
-     color: darkcyan;
+     color: $dark-cyan;
      text-shadow: 4px 4px 1px $charcoal;
      letter-spacing: 1px;
 }
 
-h2 {
+h2,
+h3,
+h4 {
+     font-family: $buttonFont;
      text-transform: uppercase;
-     color: $charcoal;
-     font-family: 'Teko', sans-serif;
-     font-size: 1.5rem;
      letter-spacing: 2px;
-     text-align: center;
+     color: $charcoal;
 }
 
+h2, 
 h3 {
-     text-transform: uppercase;
-     color: $charcoal;
-     font-family: 'Teko', sans-serif;
-     text-align: center;
      font-size: 1.5rem;
+     text-align: center;
 }
 
 h4 {
-     text-transform: uppercase;
-     padding: 15px;
-     font-family: 'Teko', sans-serif;
-     letter-spacing: 2px;
+     padding: 0 15px;
 }
 
 p {
@@ -50,4 +47,3 @@ a {
      text-decoration: none;
      color: $charcoal;
 }
-

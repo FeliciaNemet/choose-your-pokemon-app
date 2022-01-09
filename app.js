@@ -1,7 +1,5 @@
-// create namespace for the app:
 const pokemonStarterApp = {};
 
-// create init function
 pokemonStarterApp.init = () => {
      pokemonStarterApp.setUpPokeEventListeners();
      pokemonStarterApp.getPokemon();
@@ -9,13 +7,10 @@ pokemonStarterApp.init = () => {
 
 pokemonStarterApp.setUpPokeEventListeners = () => {
      document.querySelector('#pokemonChoice').addEventListener('change', function () {
-     pokemonStarterApp.findPokemon = this.value;
-
-        // console.log(pokemonStarterApp.findPokemon);  
-        // ^ this is displaying the value (name of pokemon)
-
-     pokemonStarterApp.getPokemon(pokemonStarterApp.findPokemon);
-
+          
+          pokemonStarterApp.findPokemon = this.value;
+          pokemonStarterApp.getPokemon(pokemonStarterApp.findPokemon);
+          
      });
 };
 
@@ -57,7 +52,7 @@ pokemonStarterApp.getPokemon = (id) => {
           })
           .then((jsonResult) => {
                const myPokemon = jsonResult;
-               // console.log(myPokemon);
+               console.log(myPokemon);
 
                pokemonStarterApp.displayPokers(myPokemon);
                pokemonStarterApp.makeShinyEventListeners(myPokemon);
@@ -68,8 +63,7 @@ pokemonStarterApp.getPokemon = (id) => {
 pokemonStarterApp.displayPokers = (pokeObject) => {
 
      const pokeBadge = document.querySelector(`#poke-badge`);
-     pokeBadge.innerHTML = `<img src="./assets/${pokeObject.types[0].type.name}.png" >`;
-     console.log(pokeBadge);
+     pokeBadge.innerHTML = `<img src="./assets/${pokeObject.types[0].type.name}.png" alt="${pokeObject.types[0].type.name} badge" >`;
 
      const pokeName = document.querySelector(`#poke-name`);
      pokeName.innerHTML = pokemonStarterApp.findPokemon;
@@ -82,21 +76,24 @@ pokemonStarterApp.displayPokers = (pokeObject) => {
 
      const pokeFrontImage = document.querySelector(`#poke-front-image`);
      pokeFrontImage.src = pokeObject[`sprites`][`front_default`];
+     pokeFrontImage.alt = `${pokemonStarterApp.findPokemon} front`;
 
      const pokeBackImage = document.querySelector(`#poke-back-image`);
      pokeBackImage.src = pokeObject[`sprites`][`back_default`];
+     pokeBackImage.alt = `${pokemonStarterApp.findPokemon} back`;
 
      const shiny = document.querySelector(`#shiny`);
      shiny.innerHTML = `toggle shiny ${pokemonStarterApp.findPokemon}`;
-
      
 };
 
 pokemonStarterApp.addPokeClasses = (id) => {
+
      const pokeName = document.querySelector(`#poke-name`);
 
      pokeName.removeAttribute('class');
      pokeName.classList.add(`${id}-styles`);
+
 };
 
 // initialize the app

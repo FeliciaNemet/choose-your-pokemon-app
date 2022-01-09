@@ -244,33 +244,28 @@ h1 {
   text-transform: uppercase;
   text-align: center;
   font-family: "Press Start 2P", cursive;
-  color: darkcyan;
+  color: #008b8b;
   text-shadow: 4px 4px 1px #262626;
   letter-spacing: 1px;
 }
 
-h2 {
-  text-transform: uppercase;
-  color: #262626;
+h2,
+h3,
+h4 {
   font-family: "Teko", sans-serif;
-  font-size: 1.5rem;
+  text-transform: uppercase;
   letter-spacing: 2px;
-  text-align: center;
+  color: #262626;
 }
 
+h2,
 h3 {
-  text-transform: uppercase;
-  color: #262626;
-  font-family: "Teko", sans-serif;
-  text-align: center;
   font-size: 1.5rem;
+  text-align: center;
 }
 
 h4 {
-  text-transform: uppercase;
-  padding: 15px;
-  font-family: "Teko", sans-serif;
-  letter-spacing: 2px;
+  padding: 0 15px;
 }
 
 p {
@@ -410,7 +405,8 @@ a {
           align-items: center;
 }
 
-.ball {
+.ball,
+.ball2 {
   height: 100px;
   width: 100px;
   border-radius: 100px;
@@ -429,7 +425,8 @@ a {
   margin: 10px;
 }
 
-.center, .center2 {
+.center,
+.center2 {
   background: white;
   border: 3px #262626 solid;
 }
@@ -457,26 +454,30 @@ a {
   background-image: radial-gradient(white 60%, #757F7A);
 }
 
-.ball:hover {
+.ball:hover,
+.ball2:hover {
   -webkit-transition-duration: 0.2s;
           transition-duration: 0.2s;
-  -webkit-transform: rotate(5deg);
-          transform: rotate(5deg);
-  /*   transform: rotate(0deg); */
+}
+
+.ball:hover {
+  -webkit-transform: rotate(8deg);
+          transform: rotate(8deg);
+}
+
+.ball2:hover {
+  -webkit-transform: rotate(-8deg);
+          transform: rotate(-8deg);
 }
 
 body {
-  background-color: lightgray;
+  background-color: #d3d3d3;
 }
 
 .wrapper {
   max-width: 1200px;
-  margin: 0 auto;
   width: 90%;
-}
-
-.my-form {
-  text-align: center;
+  margin: 0 auto;
 }
 
 .master-box {
@@ -493,7 +494,12 @@ body {
           justify-content: center;
 }
 
-label {
+.my-form {
+  text-align: center;
+}
+
+label,
+select {
   text-transform: uppercase;
   font-family: "Teko", sans-serif;
   letter-spacing: 1px;
@@ -501,48 +507,10 @@ label {
 }
 
 select {
-  text-transform: uppercase;
-  font-family: "Teko", sans-serif;
-  background-color: darkcyan;
+  background-color: #008b8b;
   border: none;
-  color: #262626;
   padding-left: 5px;
   margin-left: 10px;
-}
-
-.shiny {
-  text-transform: uppercase;
-  font-family: "Teko", sans-serif;
-  background-color: #A93671;
-  color: white;
-  border: none;
-  padding: 0.5em;
-  border-radius: 5px 5px 0 0;
-}
-
-.shiny:hover {
-  color: #262626;
-}
-
-.poke-picture {
-  position: relative;
-  z-index: 10;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.poke-picture::before {
-  content: "";
-  width: 55px;
-  height: 15px;
-  border-radius: 50%;
-  background: #9f913e;
-  display: block;
-  position: absolute;
-  bottom: 39px;
-  left: 42px;
-  z-index: -10;
 }
 
 .pokemon-data {
@@ -573,6 +541,7 @@ select {
 .pokemon-data h3 {
   font-family: "Teko", sans-serif;
   letter-spacing: 2px;
+  margin: 0;
 }
 
 .poke-badge {
@@ -584,8 +553,28 @@ select {
   width: 70px;
 }
 
+.poke-picture {
+  position: relative;
+  z-index: 10;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
 .poke-picture img {
   height: 150px;
+}
+
+.poke-picture::before {
+  content: "";
+  width: 55px;
+  height: 15px;
+  border-radius: 50%;
+  background: #9f913e;
+  display: block;
+  position: absolute;
+  bottom: 39px;
+  left: 42px;
+  z-index: -10;
 }
 
 .poke-stats {
@@ -599,6 +588,22 @@ select {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+}
+
+.shiny {
+  text-transform: uppercase;
+  font-family: "Teko", sans-serif;
+  background-color: #A93671;
+  color: white;
+  border: none;
+  width: 70%;
+  padding: 0.5em 0 0.4em 0;
+  border-radius: 5px 5px 0 0;
+  margin-top: 15px;
+}
+.shiny:hover, .shiny:focus {
+  color: #262626;
+  background-color: #c64c8b;
 }
 
 footer {
@@ -624,31 +629,20 @@ footer a:hover {
 }
 
 @media (max-width: 480px) {
-  .credits {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-  }
-
-  .poke-picture {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-  }
-
-  .master-box {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-  }
-
   .hide {
     display: none;
+  }
+
+  .credits,
+.poke-picture,
+.master-box {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+
+  .shiny {
+    width: 90%;
   }
 }
