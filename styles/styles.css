@@ -520,6 +520,10 @@ select {
   border-radius: 5px 5px 0 0;
 }
 
+.shiny:hover {
+  color: #262626;
+}
+
 .poke-picture {
   position: relative;
   z-index: 10;
