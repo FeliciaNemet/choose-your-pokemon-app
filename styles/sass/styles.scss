@@ -2,7 +2,7 @@
 @import "typography";
 @import "pokemon-styles";
 @import "pokeballs";
-@import "media-queries";
+
 
 body {
      background-color: lightgray;
@@ -55,6 +55,7 @@ select {
 .poke-picture {
      position: relative;
      z-index: 10;
+     display: flex;
 }
 
 .poke-picture::before {
@@ -75,17 +76,29 @@ select {
      justify-content: center;
      align-items: center;
      flex-direction: column;
+     position: relative;
      border: 2px solid #393939;
      border-radius: 5px;
      background-color: #bdae58;
      box-shadow: inset 5px 5px rgba(0, 0, 0, 0.15);
      outline: 12px solid #777;
      max-width: 440px;
+     width: 80%;
      margin: 50px auto 50px auto;
 
      h3 {
           font-family: 'Teko', sans-serif;
           letter-spacing: 2px;
+     }
+}
+
+.poke-badge {
+     position: absolute;
+     top: -40px;
+     right: -40px; 
+
+     img {
+          width: 70px;
      }
 }
 
@@ -107,6 +120,8 @@ footer {
      .credits {
           display: flex;
           justify-content: space-between;
+          max-width: 630px;
+          margin: auto;
      }
 
      a, p {
@@ -117,3 +132,5 @@ footer {
           color: $ruby-red;
      }
 }
+
+@import "media-queries";
