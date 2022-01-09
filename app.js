@@ -67,6 +67,10 @@ pokemonStarterApp.getPokemon = (id) => {
 
 pokemonStarterApp.displayPokers = (pokeObject) => {
 
+     const pokeBadge = document.querySelector(`#poke-badge`);
+     pokeBadge.innerHTML = `<img src="./assets/${pokeObject.types[0].type.name}.png" >`;
+     console.log(pokeBadge);
+
      const pokeName = document.querySelector(`#poke-name`);
      pokeName.innerHTML = pokemonStarterApp.findPokemon;
 

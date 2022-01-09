@@ -283,35 +283,6 @@ a {
   color: #262626;
 }
 
-.pokemon-data {
-  border: 2px solid #393939;
-  border-radius: 5px;
-  background-color: #bdae58;
-  -webkit-box-shadow: inset 5px 5px rgba(0, 0, 0, 0.15);
-          box-shadow: inset 5px 5px rgba(0, 0, 0, 0.15);
-  outline: 12px solid #777;
-  max-width: 440px;
-  margin: 50px auto 50px auto;
-}
-
-.poke-picture {
-  position: relative;
-  z-index: 10;
-}
-
-.poke-picture::before {
-  content: "";
-  width: 55px;
-  height: 15px;
-  border-radius: 50%;
-  background: #9f913e;
-  display: block;
-  position: absolute;
-  bottom: 39px;
-  left: 42px;
-  z-index: -10;
-}
-
 .squirtle-styles {
   color: #9fd5dd;
   text-shadow: 2px 2px 1px #297383;
@@ -330,34 +301,6 @@ a {
 .pikachu-styles {
   color: #f6e757;
   text-shadow: 2px 2px 1px #d98f00;
-}
-
-body {
-  background-color: lightgray;
-}
-
-.wrapper {
-  max-width: 1200px;
-  margin: 0 auto;
-  width: 90%;
-}
-
-.my-form {
-  text-align: center;
-}
-
-.master-box {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  text-align: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
 }
 
 .container {
@@ -393,7 +336,7 @@ body {
 
 .center, .center2 {
   background: white;
-  border: 3px black solid;
+  border: 3px #262626 solid;
 }
 
 .center {
@@ -427,10 +370,39 @@ body {
   /*   transform: rotate(0deg); */
 }
 
+body {
+  background-color: lightgray;
+}
+
+.wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 90%;
+}
+
+.my-form {
+  text-align: center;
+}
+
+.master-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  text-align: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
 label {
   text-transform: uppercase;
   font-family: "Teko", sans-serif;
   letter-spacing: 1px;
+  color: #262626;
 }
 
 select {
@@ -438,13 +410,9 @@ select {
   font-family: "Teko", sans-serif;
   background-color: darkcyan;
   border: none;
-}
-
-option {
-  text-transform: uppercase;
-  font-family: "Teko", sans-serif;
-  background-color: darkcyan;
-  border: none;
+  color: #262626;
+  padding-left: 5px;
+  margin-left: 10px;
 }
 
 .shiny {
@@ -454,6 +422,25 @@ option {
   color: white;
   border: none;
   padding: 0.5em;
+  border-radius: 5px 5px 0 0;
+}
+
+.poke-picture {
+  position: relative;
+  z-index: 10;
+}
+
+.poke-picture::before {
+  content: "";
+  width: 55px;
+  height: 15px;
+  border-radius: 50%;
+  background: #9f913e;
+  display: block;
+  position: absolute;
+  bottom: 39px;
+  left: 42px;
+  z-index: -10;
 }
 
 .pokemon-data {
@@ -470,6 +457,14 @@ option {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  border: 2px solid #393939;
+  border-radius: 5px;
+  background-color: #bdae58;
+  -webkit-box-shadow: inset 5px 5px rgba(0, 0, 0, 0.15);
+          box-shadow: inset 5px 5px rgba(0, 0, 0, 0.15);
+  outline: 12px solid #777;
+  max-width: 440px;
+  margin: 50px auto 50px auto;
 }
 .pokemon-data h3 {
   font-family: "Teko", sans-serif;
