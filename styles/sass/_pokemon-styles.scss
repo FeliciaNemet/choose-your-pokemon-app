@@ -1,31 +1,3 @@
-.pokemon-data {
-    border: 2px solid #393939;
-    border-radius: 5px;
-    background-color: #bdae58;
-    box-shadow: inset 5px 5px rgba(0, 0, 0, 0.15);
-    outline: 12px solid #777;
-    max-width: 440px;
-    margin: 50px auto 50px auto;
-}
-
-.poke-picture {
-    position: relative;
-    z-index: 10;
-}
-
-.poke-picture::before {
-    content : '';
-    width: 55px;
-    height: 15px;
-    border-radius: 50%;  
-    background: #9f913e;
-    display: block;
-    position: absolute;
-    bottom: 39px;
-    left: 42px;
-    z-index: -10;
-}
-
 .squirtle-styles {
     color: #9fd5dd;
     text-shadow: 2px 2px 1px #297383;
@@ -46,49 +18,50 @@
     text-shadow: 2px 2px 1px #d98f00;
 }
 
+
 .vulpix-styles {
-    color:  rgb(241, 145, 93);
-    text-shadow: 2px 2px 1px rgb(169, 109, 50);
+    color:  #f1915d;
+    text-shadow: 2px 2px 1px #a96d32;
 }
 
 .psyduck-styles {
-    color:  rgb(255, 217, 0);
-    text-shadow: 2px 2px 1px rgb(239, 164, 57);
+    color:  #ffd900;
+    text-shadow: 2px 2px 1px #efa439;
 }
 
 .growlithe-styles {
-    color:  rgb(251, 135, 46);
-    text-shadow: 2px 2px 1px rgb(211, 70, 72);
+    color:  #fb872e;
+    text-shadow: 2px 2px 1px #d34648;
 }
 
 .poliwag-styles {
-    color:  rgb(75, 126, 203);
-    text-shadow: 2px 2px 1px rgb(52, 87, 135);
+    color:  #4b7ecb;
+    text-shadow: 2px 2px 1px #345787;
 }
 
 .tentacool-styles {
-    color:  rgb(109, 213, 251);
-    text-shadow: 2px 2px 1px rgb(27, 149, 176);
+    color:  #6dd5fb;
+    text-shadow: 2px 2px 1px #1b95b0;
 }
 
 .ponyta-styles {
-    color:  rgb(255, 239, 201);
-    text-shadow: 2px 2px 1px rgb(233, 207, 129);
+    color:  #ffefc9;
+    text-shadow: 2px 2px 1px #e9cf81;
 }
 
 .slowpoke-styles {
-    color:  rgb(255, 119, 142);
-    text-shadow: 2px 2px 1px rgb(237, 83, 118);
+    color:  #ff778e;
+    text-shadow: 2px 2px 1px #ed5376;
 }
 
 .magnemite-styles {
-    color:  rgb(172, 216, 188);
-    text-shadow: 2px 2px 1px rgb(128, 183, 164);
+    color:  #acd8bc;
+    text-shadow: 2px 2px 1px #80b7a4;
 }
 
 .seel-styles {
-    color:  rgb(231, 229, 247);
-    text-shadow: 2px 2px 1px rgb(212, 202, 241);
+    color:  #e7e5f7;
+    text-shadow: 2px 2px 1px #d4caf1;
 }
 
 .shellder-styles {
