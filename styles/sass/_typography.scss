@@ -1,2 +1,53 @@
 $headerFont: 'Press Start 2P', cursive;
-$buttonFont: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+$buttonFont: 'Teko', sans-serif;
+
+$ruby-red: #A93671;
+$charcoal: #262626;
+
+html {
+  font-size: 125%; /* 16px * 1.25 = 20px */
+}
+
+h1 {
+     text-transform: uppercase;
+     text-align: center;
+     font-family: $headerFont;
+     color: darkcyan;
+     text-shadow: 4px 4px 1px $charcoal;
+     letter-spacing: 1px;
+}
+
+h2 {
+     text-transform: uppercase;
+     color: $charcoal;
+     font-family: 'Teko', sans-serif;
+     font-size: 1.5rem;
+     letter-spacing: 2px;
+     text-align: center;
+}
+
+h3 {
+     text-transform: uppercase;
+     color: $charcoal;
+     font-family: 'Teko', sans-serif;
+     text-align: center;
+     font-size: 1.5rem;
+}
+
+h4 {
+     text-transform: uppercase;
+     padding: 15px;
+     font-family: 'Teko', sans-serif;
+     letter-spacing: 2px;
+}
+
+p {
+     text-align: center;
+     font-family: $buttonFont;
+}
+
+a {
+     text-decoration: none;
+     color: $charcoal;
+}
+

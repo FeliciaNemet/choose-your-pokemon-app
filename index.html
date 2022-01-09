@@ -8,71 +8,97 @@
      <title>Choose Your Starter</title>
      <link rel="preconnect" href="https://fonts.googleapis.com">
      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-     <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+     <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Teko:wght@700&display=swap" rel="stylesheet">
      <link rel="stylesheet" href="./styles/styles.css">
-
 </head>
 
 <body>
      <header>
-          <div class="wrapper masterBox">
-               <div class="container">
+          <div class="wrapper master-box">           
+               <div class="container"> <!-- pokeball container starts -->
                     <div class="ball">
                          <div class="center">
-                              <div class="center2">
-                              </div>
+                         <div class="center2"></div>
                          </div>
                     </div>
-               </div>
-               <div class="secondBox">
-               <h1>Choose Your Starter</h1>
-               <h2>Please select your starter pokemon below.</h2>
-               </div>
-               <div class="container">
+               </div> <!-- pokeball container ends -->
+
+               <h1>Choose Your Pokemon</h1>
+
+               <div class="container"> <!-- pokeball container starts -->
                     <div class="ball">
                          <div class="center">
-                              <div class="center2">
-                              </div>
+                         <div class="center2"></div>
                          </div>
                     </div>
-               </div>
-          </div>
-     </header>
-     <main>
-          <div class="wrapper">
-
-               <form action="" class="myForm" name="myForm">
-                    <label for="pokemonChoice">Which pokemon?</label>
-                    <select name="pokemonChoice" id="pokemonChoice">
-                         <option value disabled selected>Please choose a starter</option>
-                         <option value="bulbasaur">Bulbasaur</option>
-                         <option value="charmander">Charmander</option>
-                         <option value="squirtle">Squirtle</option>
-                         <option value="pikachu">Pikachu</option>
-                    </select>
-               </form>
-
-               <div class="wrapper">
-                    <div class="pokemon-data" id="poke-buddies">
-                         <!-- API data goes here -->
-                         <img src="" alt="" class="poke-front-image" id="poke-front-image">
-                         <img src="" alt="" class="poke-back-image" id="poke-back-image">
-                         <h2 class="poke-name" id="poke-name"></h2>
-                         <h3 class="poke-type" id="poke-type"></h3>
-                    </div>
-               </div>
-
+               </div> <!-- pokeball container ends -->
           </div> <!-- wrapper ends -->
+     </header>
 
-     </main>
+<main>
+     <div class="wrapper">
+     <h2>Please select a pokemon below.</h2>
+          <form action="" class="my-form" name="myForm">
+               <label for="pokemonChoice">Which pokemon?</label>
+               <select name="pokemonChoice" id="pokemonChoice">
+                    <option value disabled selected>Please choose a starter</option>
+                    <option value="bulbasaur">Bulbasaur</option>
+                    <option value="charmander">Charmander</option>
+                    <option value="squirtle">Squirtle</option>
+                    <option value="pikachu">Pikachu</option>
+                    <option value="vulpix">Vulpix</option>
+                    <option value="psyduck">Psyduck</option>
+                    <option value="growlithe">Growlithe</option>
+                    <option value="poliwag">Poliwag</option>
+                    <option value="tentacool">Tentacool</option>
+                    <option value="ponyta">Ponyta</option>
+                    <option value="slowpoke">Slowpoke</option>
+                    <option value="magnemite">Magnemite</option>
+                    <option value="seel">Seel</option>
+                    <option value="shellder">Shellder</option>
+                    <option value="krabby">Krabby</option>
+                    <option value="voltorb">Voltorb</option>
+                    <option value="exeggcute">Exeggcute</option>
+                    <option value="tangela">Tangela</option>
+                    <option value="horsea">Horsea</option>
+                    <option value="goldeen">Goldeen</option>
+                    <option value="staryu">Staryu</option>
+                    <option value="magikarp">Magikarp</option>
+                    <option value="lapras">Lapras</option>
+               </select>
+          </form>
+     </div> <!-- wrapper ends -->
 
-     <footer>
+     <div class="wrapper">
+          <div class="pokemon-data" id="poke-buddies">
+               <div class="poke-badge" id="poke-badge">
+                    <img src="" alt="">
+               </div>
+               <!-- API data goes here -->
+               <div class="poke-picture">    
+                    <img src="" alt="" class="poke-front-image" id="poke-front-image">
+                    <img src="" alt="" class="poke-back-image" id="poke-back-image">
+               </div>
+               <h3 id="poke-name"></h3>
+               <div class="poke-stats">
+                    <h4 class="poke-number" id="poke-number"></h4>
+                    <h4 class="poke-type" id="poke-type"></h4>
+               </div>
+               <button class="shiny" id="shiny"></button>
+          </div>
+     </div> <!-- wrapper ends -->
+</main>
+
+<footer>
+     <div class="wrapper">
+          <div class="credits">
           <p>Created @ <a href="https://junocollege.com/" target="blank">Juno College of Technology</a></p>
           <p> Data courtesy of the <a href="https://pokeapi.co/docs/v2" target="blank">PokeApi.co</a></p>
-          <p>Developed by Karen Evans & Felicia Nemet</p>
-     </footer>
+          </div>
+          <p>Developed by <a href="http://kevans.co/" target="blank">Karen Evans</a>  & <a href="http://kevans.co/" target="blank">Felicia Nemet</a></p>
+     </div>
+</footer>
 
-     <script src="./app.js"></script>
+<script src="./app.js"></script>
 </body>
-
 </html>

@@ -1,13 +1,12 @@
 @import "setup";
 @import "typography";
-@import "squirtle-styles";
-
-
+@import "pokemon-styles";
+@import "pokeballs";
+@import "media-queries";
 
 body {
      background-color: lightgray;
 }
-
 
 .wrapper {
      max-width: 1200px;
@@ -15,102 +14,106 @@ body {
      width: 90%;
 }
 
-h1 {
-     text-transform: uppercase;
-     text-align: center;
-     font-family: $headerFont;
-     color: darkcyan;
-}
-
-h2 {
-     text-transform: uppercase;
-     color: darkcyan;
-     font-family: $buttonFont;
-}
-
-
-p {
-     text-align: center;
-     font-family: $buttonFont;
-}
-
-a {
-     text-decoration: none;
-     color: black;
-}
-
-.myForm {
+.my-form {
      text-align: center;
 }
 
-.masterBox {
+.master-box {
      display: flex;
      flex-direction: row;
      text-align: center;
      justify-content: center;
 }
 
-.secondBox {
-     display: flex;
-     flex-direction: column;
-     align-items: center;
-}
-
-// Found a really neat pokeball gradient credit to : https://codepen.io/blakeworsley/pen/pbdqBK 
-
-.container {
-     display: flex;
-     justify-content: center;
-     align-items: center;
-}
-
-.ball {
-     height: 100px;
-     width: 100px;  
-     border-radius: 100px;
-     display: flex;
-     border: 5px black solid;
-     justify-content: center;
-     align-items: center;
-     background-image: linear-gradient(#7D1827 5%, red 49%, black 5%, white 49%, #CADBD1)
-}
-
-.center, .center2 {
-     background: white;
-     border: 3px black solid;
-}
-
-.center {
-     width: 30px;
-     height: 30px;
-     border-radius: 30px;
-     display: flex;
-     justify-content: center;
-     align-items: center;
-     background: grey;
-}
-
-.center2 {
-     width: 25px;
-     height: 25px;
-     border-radius: 25px;
-     background-image: radial-gradient(white 60%, #757F7A)
-}
-
-.ball:hover{
-     transition-duration: .2s;
-     transform: rotate(5deg);
-/*   transform: rotate(0deg); */
-}
-
 label {
      text-transform: uppercase;
      font-family: $buttonFont;
+     letter-spacing: 1px;
+     color: $charcoal;
 }
 
 select {
      text-transform: uppercase;
      font-family: $buttonFont;
      background-color: darkcyan;
-     border: none; 
+     border: none;
+     color: $charcoal;
+     padding-left: 5px;
+     margin-left: 10px;
+}
+
+.shiny {
+     text-transform: uppercase;
+     font-family: $buttonFont;
+     background-color: $ruby-red;
+     color: white;
+     border: none;
+     padding: .5em;  
+     border-radius: 5px 5px 0 0; 
+}
+
+.poke-picture {
+     position: relative;
+     z-index: 10;
+}
+
+.poke-picture::before {
+     content : '';
+     width: 55px;
+     height: 15px;
+     border-radius: 50%;  
+     background: #9f913e;
+     display: block;
+     position: absolute;
+     bottom: 39px;
+     left: 42px;
+     z-index: -10;
+}
+
+.pokemon-data {
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     flex-direction: column;
+     border: 2px solid #393939;
+     border-radius: 5px;
+     background-color: #bdae58;
+     box-shadow: inset 5px 5px rgba(0, 0, 0, 0.15);
+     outline: 12px solid #777;
+     max-width: 440px;
+     margin: 50px auto 50px auto;
+
+     h3 {
+          font-family: 'Teko', sans-serif;
+          letter-spacing: 2px;
+     }
+}
+
+.poke-picture img {
+     height: 150px;
+}
+
+.poke-stats {
+     display: flex;
+     flex-direction: row;
+     justify-content: space-between;
+}
+
+footer {
+     background-color: $charcoal;
+     margin-top: 70px;
+     padding: 20px 0;
+     
+     .credits {
+          display: flex;
+          justify-content: space-between;
+     }
+
+     a, p {
+          color: white;
+     }
+
+     a:hover {
+          color: $ruby-red;
+     }
 }
