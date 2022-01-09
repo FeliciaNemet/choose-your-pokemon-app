@@ -88,6 +88,8 @@ pokemonStarterApp.displayPokers = (pokeObject) => {
 
      const shiny = document.querySelector(`#shiny`);
      shiny.innerHTML = `toggle shiny ${pokemonStarterApp.findPokemon}`;
+
+     
 };
 
 pokemonStarterApp.addPokeClasses = (id) => {

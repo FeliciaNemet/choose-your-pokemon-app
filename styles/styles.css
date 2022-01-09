@@ -303,6 +303,101 @@ a {
   text-shadow: 2px 2px 1px #d98f00;
 }
 
+.vulpix-styles {
+  color: #f1915d;
+  text-shadow: 2px 2px 1px #a96d32;
+}
+
+.psyduck-styles {
+  color: #ffd900;
+  text-shadow: 2px 2px 1px #efa439;
+}
+
+.growlithe-styles {
+  color: #fb872e;
+  text-shadow: 2px 2px 1px #d34648;
+}
+
+.poliwag-styles {
+  color: #4b7ecb;
+  text-shadow: 2px 2px 1px #345787;
+}
+
+.tentacool-styles {
+  color: #6dd5fb;
+  text-shadow: 2px 2px 1px #1b95b0;
+}
+
+.ponyta-styles {
+  color: #ffefc9;
+  text-shadow: 2px 2px 1px #e9cf81;
+}
+
+.slowpoke-styles {
+  color: #ff778e;
+  text-shadow: 2px 2px 1px #ed5376;
+}
+
+.magnemite-styles {
+  color: #acd8bc;
+  text-shadow: 2px 2px 1px #80b7a4;
+}
+
+.seel-styles {
+  color: #e7e5f7;
+  text-shadow: 2px 2px 1px #d4caf1;
+}
+
+.shellder-styles {
+  color: #c9b8f2;
+  text-shadow: 2px 2px 1px #a184c9;
+}
+
+.krabby-styles {
+  color: #ffa14d;
+  text-shadow: 2px 2px 1px #ee4139;
+}
+
+.voltorb-styles {
+  color: #ff3b00;
+  text-shadow: 2px 2px 1px #b6aabe;
+}
+
+.exeggcute-styles {
+  color: #ffe6c9;
+  text-shadow: 2px 2px 1px #fc7d53;
+}
+
+.tangela-styles {
+  color: #85d5fb;
+  text-shadow: 2px 2px 1px #ba0238;
+}
+
+.horsea-styles {
+  color: #9fc3f2;
+  text-shadow: 2px 2px 1px #dfc822;
+}
+
+.goldeen-styles {
+  color: white;
+  text-shadow: 2px 2px 1px #e52d00;
+}
+
+.staryu-styles {
+  color: #dd9c3e;
+  text-shadow: 2px 2px 1px #a3692b;
+}
+
+.magikarp-styles {
+  color: #ff984e;
+  text-shadow: 2px 2px 1px #cb3134;
+}
+
+.lapras-styles {
+  color: #f9e0a5;
+  text-shadow: 2px 2px 1px #16a1ed;
+}
+
 .container {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -370,6 +465,17 @@ a {
   /*   transform: rotate(0deg); */
 }
 
+@media (max-width: 480px) {
+  .credits {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
 body {
   background-color: lightgray;
 }
