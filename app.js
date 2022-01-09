@@ -1,10 +1,15 @@
+// Create a namespace for our app:
 const pokemonStarterApp = {};
 
+
+// An initializer function. The first thing that will be called and will get all the other parts of our app up and running.
 pokemonStarterApp.init = () => {
      pokemonStarterApp.setUpPokeEventListeners();
      pokemonStarterApp.getPokemon();
 };
 
+
+//  A function to set up a change event listener on our select drop-down.When the change event fires, it will call the pokemonStarterApp.findPokemon function with the value of the selected option as an argument. 
 pokemonStarterApp.setUpPokeEventListeners = () => {
      document.querySelector('#pokemonChoice').addEventListener('change', function () {
           
@@ -14,6 +19,7 @@ pokemonStarterApp.setUpPokeEventListeners = () => {
      });
 };
 
+// A function that lets the user toggle between the default and shiny images.
 pokemonStarterApp.makeShinyEventListeners = (pokeObject) => {
      
      let count = 0
@@ -41,6 +47,8 @@ pokemonStarterApp.makeShinyEventListeners = (pokeObject) => {
      })
 };
 
+
+// A function for our API call, this will go get the data from pokeapi.co .
 pokemonStarterApp.getPokemon = (id) => {
      if (!id) return;
 
@@ -60,6 +68,8 @@ pokemonStarterApp.getPokemon = (id) => {
           });
 };
 
+
+// A function that uses the API result to create new elements and put them on the page based on the selected value.
 pokemonStarterApp.displayPokers = (pokeObject) => {
 
      const pokeBadge = document.querySelector(`#poke-badge`);
@@ -87,6 +97,8 @@ pokemonStarterApp.displayPokers = (pokeObject) => {
      
 };
 
+
+// A function that chnages the styling of the chosen pokemon's name based on the selected value.
 pokemonStarterApp.addPokeClasses = (id) => {
 
      const pokeName = document.querySelector(`#poke-name`);
@@ -96,5 +108,5 @@ pokemonStarterApp.addPokeClasses = (id) => {
 
 };
 
-// initialize the app
+// Call the init function to start off our app!
 pokemonStarterApp.init();
