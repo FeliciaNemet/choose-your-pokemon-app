@@ -71,7 +71,7 @@ pokemonStarterApp.getPokemon = (id) => {
 
 // A function that uses the API result to create new elements and put them on the page based on the selected value.
 pokemonStarterApp.displayPokers = (pokeObject) => {
-
+     // This is pulling the custom badge image from our assets folder based on the type of pokemon selected by the user.
      const pokeBadge = document.querySelector(`#poke-badge`);
      pokeBadge.innerHTML = `<img src="./assets/${pokeObject.types[0].type.name}.png" alt="${pokeObject.types[0].type.name} badge" >`;
 
@@ -98,7 +98,7 @@ pokemonStarterApp.displayPokers = (pokeObject) => {
 };
 
 
-// A function that chnages the styling of the chosen pokemon's name based on the selected value.
+// A function that changes the styling of the chosen pokemon's name based on the selected value.
 pokemonStarterApp.addPokeClasses = (id) => {
 
      const pokeName = document.querySelector(`#poke-name`);
