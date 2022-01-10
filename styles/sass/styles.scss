@@ -51,6 +51,7 @@ select {
      box-shadow: inset 5px 5px rgba(0, 0, 0, 0.15);
      outline: 12px solid #777;
      max-width: 440px;
+     min-height: 316px;
      width: 80%;
      margin: 50px auto 50px auto;
 
@@ -81,23 +82,11 @@ select {
      }
 }
 
-.poke-picture::before {
-     content : '';
-     width: 55px;
-     height: 15px;
-     border-radius: 50%;  
-     background: #9f913e;
-     display: block;
-     position: absolute;
-     bottom: 39px;
-     left: 42px;
-     z-index: -10;
-}
-
 .poke-stats {
      display: flex;
      flex-direction: row;
      justify-content: space-between;
+     padding-bottom: 50px;
 }
 
 .shiny {
@@ -110,6 +99,8 @@ select {
      padding: 0.5em 0 0.4em 0;  
      border-radius: 5px 5px 0 0; 
      margin-top: 15px;
+     position: absolute;
+     bottom: 0;
 
      &:hover,
      &:focus {
