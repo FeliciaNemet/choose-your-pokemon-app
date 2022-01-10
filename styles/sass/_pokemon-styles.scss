@@ -1,6 +1,38 @@
+.poke-picture::before {
+     content : '';
+     width: 55px;
+     height: 15px;
+     border-radius: 50%;  
+     background: #9f913e;
+     display: block;
+     position: absolute;
+     z-index: -10;
+}
+
+.poke-picture::after {
+     content : '';
+     width: 55px;
+     height: 15px;
+     border-radius: 50%;  
+     background: #9f913e;
+     display: block;
+     position: absolute;
+     z-index: -10;
+}
+
 .squirtle-styles {
      color: #9fd5dd;
      text-shadow: 2px 2px 1px #297383;
+}
+
+.squirtle-shadow::before {
+     bottom: 39px;
+     left: 44px;
+}
+
+.squirtle-shadow::after {
+     bottom: 39px;
+     right: 53px;
 }
 
 .charmander-styles {
@@ -8,9 +40,29 @@
      text-shadow: 2px 2px 1px #b7442d;
 }
 
+.charmander-shadow::before {
+     bottom: 33px;
+     left: 43px;
+}
+
+.charmander-shadow::after {
+     bottom: 33px;
+     right: 53px;
+}
+
 .bulbasaur-styles {
      color: #66cab1;
      text-shadow: 2px 2px 1px #266a6a;
+}
+
+.bulbasaur-shadow::before {
+     bottom: 47px;
+     left: 45px;
+}
+
+.bulbasaur-shadow::after {
+     bottom: 47px;
+     right: 53px;
 }
 
 .pikachu-styles {
@@ -18,9 +70,29 @@
      text-shadow: 2px 2px 1px #d98f00;
 }
 
+.pikachu-shadow::before {
+     bottom: 35px;
+     left: 41px;
+}
+
+.pikachu-shadow::after {
+     bottom: 35px;
+     right: 53px;
+}
+
 .vulpix-styles {
      color:  #f1915d;
      text-shadow: 2px 2px 1px #a96d32;
+}
+
+.vulpix-shadow::before {
+     bottom: 30px;
+     left: 47px;
+}
+
+.vulpix-shadow::after {
+     bottom: 36px;
+     right: 53px;
 }
 
 .psyduck-styles {
@@ -28,9 +100,33 @@
      text-shadow: 2px 2px 1px #efa439;
 }
 
+.psyduck-shadow::before {
+     bottom: 38px;
+     left: 47px;
+}
+
+.psyduck-shadow::after {
+     bottom: 38px;
+     right: 47px;
+}
+
 .growlithe-styles {
      color:  #fb872e;
      text-shadow: 2px 2px 1px #d34648;
+}
+
+.growlithe-shadow::before {
+     bottom: 40px;
+     left: 38px;
+     width: 75px;
+     height: 20px;
+}
+
+.growlithe-shadow::after {
+     bottom: 36px;
+     right: 39px;
+     width: 75px;
+     height: 20px;
 }
 
 .poliwag-styles {
@@ -38,9 +134,35 @@
      text-shadow: 2px 2px 1px #345787;
 }
 
+.poliwag-shadow::before {
+     bottom: 38px;
+     left: 43px;
+     width: 50px;
+}
+
+.poliwag-shadow::after {
+     bottom: 38px;
+     right: 43px;
+     width: 50px;
+}
+
 .tentacool-styles {
      color:  #6dd5fb;
      text-shadow: 2px 2px 1px #1b95b0;
+}
+
+.tentacool-shadow::before {
+     bottom: 37px;
+     left: 52px;
+     width: 40px;
+     height: 10px;
+}
+
+.tentacool-shadow::after {
+     bottom: 37px;
+     right: 56px;
+     width: 37px;
+     height: 10px;
 }
 
 .ponyta-styles {
@@ -48,9 +170,31 @@
      text-shadow: 2px 2px 1px #e9cf81;
 }
 
+.ponyta-shadow::before {
+     bottom: 26px;
+     left: 47px;
+}
+
+.ponyta-shadow::after {
+     bottom: 26px;
+     right: 51px;
+}
+
 .slowpoke-styles {
      color:  #ff778e;
      text-shadow: 2px 2px 1px #ed5376;
+}
+
+.slowpoke-shadow::before {
+     bottom: 35px;
+     left: 28px;
+     width: 85px;
+}
+
+.slowpoke-shadow::after {
+     bottom: 38px;
+     right: 31px;
+     width: 85px;
 }
 
 .magnemite-styles {
@@ -58,9 +202,33 @@
      text-shadow: 2px 2px 1px #80b7a4;
 }
 
+.magnemite-shadow::before {
+     bottom: 30px;
+     left: 63px;
+     width: 25px;
+     height: 10px;
+}
+
+.magnemite-shadow::after {
+     bottom: 30px;
+     right: 62px;
+     width: 25px;
+     height: 10px;
+}
+
 .seel-styles {
      color:  #e7e5f7;
      text-shadow: 2px 2px 1px #d4caf1;
+}
+
+.seel-shadow::before {
+     bottom: 32px;
+     left: 45px;
+}
+
+.seel-shadow::after {
+     bottom: 38px;
+     right: 51px;
 }
 
 .shellder-styles {
@@ -68,9 +236,35 @@
      text-shadow: 2px 2px 1px #a184c9;
 }
 
+.shellder-shadow::before {
+     bottom: 46px;
+     left: 41px;
+     width: 67px;
+     height: 20px;
+}
+
+.shellder-shadow::after {
+     bottom: 48px;
+     right: 45px;
+     width: 67px;
+     height: 20px;
+}
+
 .krabby-styles {
      color: #ffa04d;
      text-shadow: 2px 2px 1px #ee4139;
+}
+
+.krabby-shadow::before {
+     bottom: 45px;
+     left: 48px;
+     width: 48px;
+}
+
+.krabby-shadow::after {
+     bottom: 47px;
+     right: 54px;
+     width: 46px;
 }
 
 .voltorb-styles {
@@ -78,9 +272,37 @@
      text-shadow: 2px 2px 1px #b6aabe;
 }
 
+.voltorb-shadow::before {
+     bottom: 27px;
+     left: 60px;
+     width: 34px;
+     height: 10px;
+}
+
+.voltorb-shadow::after {
+     bottom: 27px;
+     right: 57px;
+     width: 34px;
+     height: 10px;
+}
+
 .exeggcute-styles {
      color: #d4cabd;
      text-shadow: 2px 2px 1px #fc7d53;
+}
+
+.exeggcute-shadow::before {
+     bottom: 41px;
+     left: 30px;
+     width: 90px;
+     height: 20px;
+}
+
+.exeggcute-shadow::after {
+     bottom: 43px;
+     right: 33px;
+     width: 90px;
+     height: 24px;
 }
 
 .tangela-styles {
@@ -88,9 +310,33 @@
      text-shadow: 2px 2px 1px #ba0238;
 }
 
+.tangela-shadow::before {
+     bottom: 37px;
+     left: 41px;
+     width: 62px;
+}
+
+.tangela-shadow::after {
+     bottom: 37px;
+     right: 44px;
+     width: 62px;
+}
+
 .horsea-styles {
      color: #9fc3f2;
      text-shadow: 2px 2px 1px #dfc822;
+}
+
+.horsea-shadow::before {
+     bottom: 41px;
+     left: 51px;
+     width: 40px;
+}
+
+.horsea-shadow::after {
+     bottom: 44px;
+     right: 51px;
+     width: 40px;
 }
 
 .goldeen-styles {
@@ -98,9 +344,35 @@
      text-shadow: 2px 2px 1px #e52d00;
 }
 
+.goldeen-shadow::before {
+     bottom: 31px;
+     left: 35px;
+     width: 54px;
+     height: 10px;
+}
+
+.goldeen-shadow::after {
+     bottom: 31px;
+     right: 30px;
+     width: 60px;
+     height: 10px;
+}
+
 .staryu-styles {
      color:  #dd9b3e;
      text-shadow: 2px 2px 1px #a3692b;
+}
+
+.staryu-shadow::before {
+     bottom: 50px;
+     left: 42px;
+     width: 56px;
+}
+
+.staryu-shadow::after {
+     bottom: 50px;
+     right: 60px;
+     width: 56px;
 }
 
 .magikarp-styles {
@@ -108,7 +380,33 @@
      text-shadow: 2px 2px 1px #cb3134;
 }
 
+.magikarp-shadow::before {
+     bottom: 38px;
+     left: 40px;
+     width: 64px;
+}
+
+.magikarp-shadow::after {
+     bottom: 38px;
+     right: 36px;
+     width: 64px;
+}
+
 .lapras-styles {
      color: #f9e0a5;
      text-shadow: 2px 2px 1px #16a2ed;
+}
+
+.lapras-shadow::before {
+     bottom: 19px;
+     left: 30px;
+     width: 100px;
+     height: 30px;
+}
+
+.lapras-shadow::after {
+     bottom: 22px;
+     right: 27px;
+     width: 106px;
+     height: 30px;
 }
